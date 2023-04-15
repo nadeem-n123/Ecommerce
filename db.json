@@ -13,6 +13,14 @@
         "password": "78600"
       },
       "id": 2
+    },
+    {
+      "data": {
+        "name": "nadeemSaifi",
+        "email": "nadeem78@gmail.com",
+        "password": "12345678"
+      },
+      "id": 3
     }
   ]
 }

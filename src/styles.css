@@ -7,7 +7,7 @@ body{
     margin-right: 5%;
 }
 .common-form{
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -15,13 +15,14 @@ body{
 }
 .form-input{
     height: 35px;
-    margin-bottom: 20px;
     padding-left: 10px;
     border: 1px solid blueviolet;
     color: blueviolet;
+    margin: 10px;
 }
 .form-button{
     height: 35px;
     border: 1px solid blueviolet;
     cursor: pointer;
+    margin: 10px;
 }
