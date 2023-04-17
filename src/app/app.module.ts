@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SellerAuthComponent
+    SellerAuthComponent,
+    SellerHomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SellerService } from '../Services/seller.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-auth',
@@ -15,10 +16,17 @@ export class SellerAuthComponent {
     password: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(8)])
   })
 
-  submitted: boolean =false;
+  submitted: boolean = false;
+  showLogin: boolean = false;
   constructor(
-    private _api:SellerService
+    private _api:SellerService,
+    private seller:SellerService,
+    private _router:Router
   ){}
+
+  ngOnInit(): void {
+    this.seller.reloadSeller()
+  }
 
   onSubmit(data:any){
     this.submitted = true;
@@ -26,11 +34,19 @@ export class SellerAuthComponent {
     if(this.SignUp.invalid){
       return
     }else{
-    this._api.sellerSignUp(data).subscribe((res:any)=>{
-      console.log("SignUp Data Is =>",res);
+    this._api.sellerSignUp(data)
+
+      console.log("SignUp Data Is =>",data);
       this.SignUp.reset();
       this.submitted = false;
-    })
+    }
   }
+
+  openLogin(){
+    this.showLogin = true;
+  }
+  
+  openSignUp(){
+    this.showLogin = false;
   }
 }

@@ -1,26 +1,5 @@
 {
   "seller": [
-    {
-      "name": "Mohd Nadeem",
-      "email": "nadeemSeller@gmail.com",
-      "password": "nseller123",
-      "id": 1
-    },
-    {
-      "data": {
-        "name": "Mohd Nadeem",
-        "email": "nadeem123@gmail.com",
-        "password": "78600"
-      },
-      "id": 2
-    },
-    {
-      "data": {
-        "name": "nadeemSaifi",
-        "email": "nadeem78@gmail.com",
-        "password": "12345678"
-      },
-      "id": 3
-    }
+  
   ]
 }
