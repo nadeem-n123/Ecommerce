@@ -1,7 +1,7 @@
 <div class="seller-auth">
     <div *ngIf="!showLogin">
         <h1 class="sign-up">Seller Sign-Up</h1>
-        <form [formGroup]="SignUp" (ngSubmit)="onSubmit(SignUp.value)" class="common-form">
+        <form [formGroup]="SignUp" (ngSubmit)="signUpSubmit(SignUp.value)" class="common-form">
             <input class="form-input" type="text" placeholder="Name" formControlName="name" maxlength="15">
                 <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.name.errors">
                     <span *ngIf="submitted && SignUp.controls.name.errors['required']">
@@ -39,14 +39,15 @@
                     </span>
                 </span>
             <button class="form-button">SignUp</button>
-            <a type="button" (click)="openLogin()"> Already have an account? Login</a>
+            <a type="button" class="SignUp-toggle mt-3 px-2" (click)="openLogin()"> Already have an account? Login</a>
         </form>
     </div>
 
     <!-- Login Seller Page Start -->
     <div *ngIf="showLogin">
         <h1 class="sign-up">Seller Login</h1>
-        <form [formGroup]="SignUp" (ngSubmit)="onSubmit(SignUp.value)" class="common-form">
+        <p class="text-danger text-center">{{authError}}</p>
+        <form [formGroup]="Login" (ngSubmit)="loginSubmit(Login.value)" class="common-form">
             <input class="form-input" type="email" placeholder="Email" formControlName="email">
                 <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.email.errors">
                     <span *ngIf="submitted && SignUp.controls.email.errors['required']">
@@ -69,7 +70,7 @@
                     </span>
                 </span>
             <button class="form-button">Login</button>
-            <a type="button" (click)="openSignUp()"> No Existing account? SignUp</a>
+            <a type="button" class="Login-toggle mt-3 px-2" (click)="openSignUp()"> Don't have account? SignUp</a>
         </form>
     </div>
     <!-- Login Seller page End -->

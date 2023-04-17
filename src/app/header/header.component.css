@@ -8,6 +8,10 @@
     margin: 0;
     font-size: 40px;
 }
+.nav h1 a{
+    color: blueviolet;
+    text-decoration: none;
+}
 .nav ul{
     display: inline-flex;
     list-style-type: none;

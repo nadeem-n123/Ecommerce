@@ -10,14 +10,10 @@ import { Router } from '@angular/router';
 })
 export class SellerAuthComponent {
 
-  SignUp = new FormGroup({
-    name: new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(15),Validators.pattern('[a-zA-Z]*')]),
-    email: new FormControl('',[Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
-    password: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(8)])
-  })
-
   submitted: boolean = false;
   showLogin: boolean = false;
+  authError: string='';
+
   constructor(
     private _api:SellerService,
     private seller:SellerService,
@@ -28,7 +24,13 @@ export class SellerAuthComponent {
     this.seller.reloadSeller()
   }
 
-  onSubmit(data:any){
+  SignUp = new FormGroup({
+    name: new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(15),Validators.pattern('[a-zA-Z]*')]),
+    email: new FormControl('',[Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
+    password: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(8)])
+  })
+
+  signUpSubmit(data:any){
     this.submitted = true;
 
     if(this.SignUp.invalid){
@@ -40,6 +42,21 @@ export class SellerAuthComponent {
       this.SignUp.reset();
       this.submitted = false;
     }
+  }
+
+  Login = new FormGroup({
+    email: new FormControl('',[Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
+    password: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(8)])
+  })
+
+  loginSubmit(data:any){
+    // this.authError='';
+    this.seller.sellerLogin(data);
+    this.seller.IsloginFailed.subscribe((isError:any)=>{
+      if(isError){
+        this.authError='! Incorrect Email and password.'
+      }
+    })
   }
 
   openLogin(){

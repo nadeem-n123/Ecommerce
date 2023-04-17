@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
@@ -7,8 +7,11 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SellerService {
+
   url: any = 'http://localhost:3000/seller';
-  IsSellerLoggedIn = new BehaviorSubject<boolean>(false)
+  IsSellerLoggedIn = new BehaviorSubject<boolean>(false);
+  IsloginFailed = new EventEmitter<boolean>(false);
+
   constructor(
     private http:HttpClient,
     private _router:Router
@@ -27,5 +30,19 @@ export class SellerService {
         this.IsSellerLoggedIn.next(true);
         this._router.navigate(['/seller-home']);
       }
+    }
+
+    sellerLogin(data : any){
+      this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`,{observe : 'response'})
+      .subscribe((res:any)=>{
+        if(res && res.body && res.body.length){
+          console.log("userLogged In");
+          localStorage.setItem('seller',JSON.stringify(res.body))
+          this._router.navigate(['/seller-home']);
+        }else{
+          console.log("Login Failed");
+          this.IsloginFailed.emit(true);
+        }
+      });
     }
 }
