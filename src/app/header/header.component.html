@@ -12,10 +12,10 @@
             <li><a href="#">Login</a></li>
         </ul>
         <ul *ngSwitchCase="'seller'">
-            <li><a routerLink="/empty">Add Product</a></li>
-            <li><a routerLink="/empty">Product List</a></li>
-            <li><a routerLink="/empty">Logout</a></li>
-            <li><a routerLink="/empty">Seller Name</a></li>
+            <li><a routerLink="add-seller">Add Product</a></li>
+            <li><a routerLink="seller-home">Product List</a></li>
+            <li><a type="button" (click)="logout()">Logout</a></li>
+            <li><a>{{sellerName}}</a></li>
         </ul>
     </div>
 </nav>

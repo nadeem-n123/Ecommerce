@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { AddSellerProductComponent } from './add-seller-product/add-seller-product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     HeaderComponent,
     HomeComponent,
     SellerAuthComponent,
-    SellerHomeComponent
+    SellerHomeComponent,
+    AddSellerProductComponent
   ],
   imports: [
     BrowserModule,
