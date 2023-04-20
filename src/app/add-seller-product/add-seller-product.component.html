@@ -1,6 +1,55 @@
 <div class="add-pro">
     <h1 class="text-center">Add Seller Product's</h1>
-    <form>
-
+    <form [formGroup] = "addProduct" (ngSubmit)="onSubmit(addProduct.value)" class="common-form">
+        <input class="form-input" type="text" placeholder="products Name" formControlName="pname" maxlength="15">
+        <span class="form-text text-danger px-3" *ngIf="submitted && addProduct.controls.pname.errors">
+            <span *ngIf="submitted && addProduct.controls.pname.errors['required']">
+                Product name is required.
+            </span>
+            <span *ngIf="submitted && addProduct.controls.pname.errors['minlength']">
+                Minimum length required atleast 5 character.
+            </span>
+            <span *ngIf="submitted && addProduct.controls.pname.errors['maxlength']">
+                Maximum length is 20 character.
+            </span>
+            <span *ngIf="submitted && addProduct.controls.pname.errors['pattern']">
+                ! Please enter a valid product name.
+            </span>
+        </span>
+        <input class="form-input" type="text" placeholder="products Price" formControlName="price">
+        <span class="form-text text-danger" *ngIf="submitted && addProduct.controls.price.errors">
+            <span *ngIf="submitted && addProduct.controls.price.errors['required']">
+                Price is required.
+            </span>
+            <span *ngIf="submitted && addProduct.controls.price.errors['pattern']">
+                Please enter valid price.
+            </span>
+        </span>
+        <input class="form-input" type="text" placeholder="products Color" formControlName="color">
+        <span class="form-text text-danger" *ngIf="submitted && addProduct.controls.color.errors">
+            <span *ngIf="submitted && addProduct.controls.color.errors['required']">
+                Color is required.
+            </span>
+        </span>
+        <input class="form-input" type="text" placeholder="products Category" formControlName="category" maxlength="20">
+        <span class="form-control text-danger" *ngIf="submitted && addProduct.controls.category.errors">
+            <span *ngIf="submitted && addProduct.controls.category.errors['required']">
+                Category is required.
+            </span>
+            <span *ngIf="submitted && addProduct.controls.category.errors['minlength']">
+                Minimum length required atleast 3 character.
+            </span>
+            <span *ngIf="submitted && addProduct.controls.category.errors['maxlength']">
+                Maximum length required 20 character. 
+            </span>
+        </span>
+        <textarea class="form-input" type="text" placeholder="products Description" formControlName="pdesc">
+        </textarea>
+        <span class="form-text text-danger" *ngIf="submitted && addProduct.controls.pdesc.errors">
+            <span *ngIf="submitted && addProduct.controls.pdesc.errors['pattern']">
+                ! Please enter a valid description.
+            </span>
+        </span>
+        <button class="form-input">Submit</button>
     </form>
 </div>
