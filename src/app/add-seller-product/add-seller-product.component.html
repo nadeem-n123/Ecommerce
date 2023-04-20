@@ -2,7 +2,7 @@
     <h1 class="text-center">Add Seller Product's</h1>
     <form [formGroup] = "addProduct" (ngSubmit)="onSubmit(addProduct.value)" class="common-form">
         <input class="form-input" type="text" placeholder="products Name" formControlName="pname" maxlength="15">
-        <span class="form-text text-danger px-3" *ngIf="submitted && addProduct.controls.pname.errors">
+        <span class="form-text text-danger px-2" *ngIf="submitted && addProduct.controls.pname.errors">
             <span *ngIf="submitted && addProduct.controls.pname.errors['required']">
                 Product name is required.
             </span>
@@ -17,7 +17,7 @@
             </span>
         </span>
         <input class="form-input" type="text" placeholder="products Price" formControlName="price">
-        <span class="form-text text-danger" *ngIf="submitted && addProduct.controls.price.errors">
+        <span class="form-text text-danger px-2" *ngIf="submitted && addProduct.controls.price.errors">
             <span *ngIf="submitted && addProduct.controls.price.errors['required']">
                 Price is required.
             </span>
@@ -26,13 +26,13 @@
             </span>
         </span>
         <input class="form-input" type="text" placeholder="products Color" formControlName="color">
-        <span class="form-text text-danger" *ngIf="submitted && addProduct.controls.color.errors">
+        <span class="form-text text-danger px-2" *ngIf="submitted && addProduct.controls.color.errors">
             <span *ngIf="submitted && addProduct.controls.color.errors['required']">
                 Color is required.
             </span>
         </span>
         <input class="form-input" type="text" placeholder="products Category" formControlName="category" maxlength="20">
-        <span class="form-control text-danger" *ngIf="submitted && addProduct.controls.category.errors">
+        <span class="form-text text-danger px-2" *ngIf="submitted && addProduct.controls.category.errors">
             <span *ngIf="submitted && addProduct.controls.category.errors['required']">
                 Category is required.
             </span>
@@ -45,7 +45,7 @@
         </span>
         <textarea class="form-input" type="text" placeholder="products Description" formControlName="pdesc">
         </textarea>
-        <span class="form-text text-danger" *ngIf="submitted && addProduct.controls.pdesc.errors">
+        <span class="form-text text-danger px-2" *ngIf="submitted && addProduct.controls.pdesc.errors">
             <span *ngIf="submitted && addProduct.controls.pdesc.errors['pattern']">
                 ! Please enter a valid description.
             </span>

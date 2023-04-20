@@ -14,11 +14,11 @@ export class AddSellerProductComponent implements OnInit{
 
   }
   addProduct = new FormGroup({
-    pname : new FormControl('',[Validators.required,Validators.minLength(5),Validators.maxLength(20),Validators.pattern('[a-zA-Z]*')]),
-    price : new FormControl('',[Validators.required,Validators.pattern('[^-?[0-9]\\d*(\\.\\d{1,2})?$]')]),
+    pname : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[a-zA-Z]*')]),
+    price : new FormControl('',[Validators.required,Validators.pattern('^(?:(?:\.))[0-9]*$')]),
     color : new FormControl('',Validators.required),
     category : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20)]),
-    pdesc : new FormControl('',Validators.pattern('[a-zA-Z]*'))
+    pdesc : new FormControl('',Validators.pattern('[ a-zA-Z]*'))
   })
 
   onSubmit(data:any){
@@ -26,10 +26,10 @@ export class AddSellerProductComponent implements OnInit{
 
     if(this.addProduct.invalid){
       return
-    }
+    }else{
     console.log("Add product data Is =>",data);
     this.addProduct.reset();
     this.submitted = false;
   }
-
+  }
 }
