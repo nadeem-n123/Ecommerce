@@ -8,7 +8,7 @@ export class ProductsService {
 
   constructor(private http:HttpClient) { }
 
-  addProduct(data:any){
+  addcategoryProduct(data:any){
     return this.http.post(`http://localhost:3000/products`,data);
   }
 }

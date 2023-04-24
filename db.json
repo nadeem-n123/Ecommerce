@@ -5,11 +5,54 @@
       "email": "nadeem123@gmail.com",
       "password": "123456",
       "id": 1
+    },
+    {
+      "name": "Hasim",
+      "email": "hasim78@gmail.com",
+      "password": "123789",
+      "id": 2
     }
   ],
-  "products":[
+  "products": [
     {
-   
+      "pname": "apple",
+      "price": "1220",
+      "color": "Brownred",
+      "category": "fruits",
+      "pdesc": "Please puchase it once",
+      "id": 1
+    },
+    {
+      "pname": "Orange",
+      "price": "80",
+      "color": "orange",
+      "category": "fruits",
+      "pdesc": "this is a nagpur orange",
+      "id": 2
+    },
+    {
+      "pname": "Oppo",
+      "price": "16599",
+      "color": "silver",
+      "category": "Phone",
+      "pdesc": "This is a best phone in the market",
+      "id": 3
+    },
+    {
+      "pname": "pencil",
+      "price": "8",
+      "color": "gray",
+      "category": "study",
+      "pdesc": "pencil used to write",
+      "id": 4
+    },
+    {
+      "pname": "tomato",
+      "price": "20",
+      "color": "red",
+      "category": "vegetables",
+      "pdesc": "used for food cooking",
+      "id": 5
     }
   ]
 }

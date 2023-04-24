@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProductsService } from '../Services/products.service';
 
 @Component({
   selector: 'app-add-seller-product',
@@ -9,7 +10,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class AddSellerProductComponent implements OnInit{
 
   submitted : boolean = false;
-  constructor(){}
+  addProductmsg : string|undefined;
+
+  constructor(
+    private api:ProductsService
+  ){}
   ngOnInit(): void {
 
   }
@@ -27,9 +32,16 @@ export class AddSellerProductComponent implements OnInit{
     if(this.addProduct.invalid){
       return
     }else{
-    console.log("Add product data Is =>",data);
-    this.addProduct.reset();
-    this.submitted = false;
+    this.api.addcategoryProduct(data).subscribe((Objs:any)=>{
+
+      console.log("Add product data Is =>",data);
+      this.addProductmsg = 'Message : Product added successfully.'
+      setTimeout(()=>(this.addProductmsg = undefined),2500);
+      this.addProduct.reset();
+      this.submitted = false;
+    }, (err) =>{
+      console.warn(err)
+    })
   }
   }
 }

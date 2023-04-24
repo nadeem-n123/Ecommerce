@@ -1,5 +1,6 @@
 <div class="add-pro">
-    <h1 class="text-center">Add Seller Product's</h1>
+    <h1 class="text-center mt-4" style="color: blueviolet;">Add Seller Product's</h1>
+    <p class="message_p">{{addProductmsg}}</p>
     <form [formGroup] = "addProduct" (ngSubmit)="onSubmit(addProduct.value)" class="common-form">
         <input class="form-input" type="text" placeholder="products Name" formControlName="pname" maxlength="15">
         <span class="form-text text-danger px-2" *ngIf="submitted && addProduct.controls.pname.errors">

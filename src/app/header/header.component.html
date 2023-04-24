@@ -14,8 +14,8 @@
         <ul *ngSwitchCase="'seller'">
             <li><a routerLink="add-seller">Add Product</a></li>
             <li><a routerLink="seller-home">Product List</a></li>
-            <li><a type="button" (click)="logout()">Logout</a></li>
-            <li><a>{{sellerName}}</a></li>
+            <li><a class="px-1" style="color: darkcyan; border: 2px solid darkcyan;" type="button" (click)="logout()">Logout</a></li>
+            <li><a class="px-1 py-1" style="color: darkred; border: 2px solid darkred;">{{sellerName}}</a></li>
         </ul>
     </div>
 </nav>
