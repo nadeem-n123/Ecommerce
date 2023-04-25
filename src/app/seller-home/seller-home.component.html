@@ -19,7 +19,7 @@
         <td>{{list?.category}}</td>
         <td>{{list?.pdesc}}</td>
         <td>
-          <a routerLink="update"><i type="button" class="fa fa-edit" style="font-size:30px;color:green;"></i></a>
+          <a routerLink="/update/{{list?.id}}"><i type="button" class="fa fa-edit" style="font-size:30px;color:green;"></i></a>
           <i type="button" (click)="onDlt(list?.id)" class="fa fa-trash px-3" style="font-size:30px;color:darkred;"></i>
         </td>
       </tr>

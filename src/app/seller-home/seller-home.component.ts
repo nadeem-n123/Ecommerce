@@ -27,10 +27,9 @@ export class SellerHomeComponent implements OnInit{
   }
 
   onDlt(id:any){
-
     if(confirm('Are you sure to delete this products ?')){
     this.api.deleteProduct(id).subscribe((Objs:any)=>{
-      this.dltProductmsg = "Message : Products has been deleted successfully.";
+      this.dltProductmsg = "Message : Product has been deleted successfully.";
       setTimeout(() => (this.dltProductmsg = undefined),2500);
       this.getProducts();
     })

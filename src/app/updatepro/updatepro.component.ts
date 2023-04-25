@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProductsService } from '../Services/products.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-updatepro',
@@ -11,37 +12,47 @@ export class UpdateproComponent implements OnInit{
 
   submitted: boolean = false;
   addProductmsg: string|undefined;
+  productList: any;
 
   constructor(
-    private api:ProductsService
+    private api:ProductsService,
+    private router:ActivatedRoute,
+    private _router:Router
     ){}
-  ngOnInit(): void {
-    
-  }
 
-  addProduct = new FormGroup({
-    pname : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[a-zA-Z]*')]),
+  updateProduct = new FormGroup({
+    pname : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[ a-zA-Z0-9]*')]),
     price : new FormControl('',[Validators.required,Validators.pattern('^(?:(?:\.))[0-9]*$')]),
     color : new FormControl('',Validators.required),
     category : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20)]),
-    pdesc : new FormControl('',Validators.pattern('[ a-zA-Z]*'))
+    pdesc : new FormControl('',Validators.pattern('[ a-zA-Z.]*'))
   })
 
-  onSubmit(data:any){
+  ngOnInit(){
+    this.setEditValue();
+  }
+
+  setEditValue(){
+    this.api.getCurrentProduct(this.router.snapshot.params['id']).subscribe((Objs:any)=>{
+      this.productList = Objs;
+
+      this.updateProduct.controls.pname.setValue(this?.productList?.pname);
+      this.updateProduct.controls.price.setValue(this?.productList?.price);
+      this.updateProduct.controls.color.setValue(this?.productList?.color);
+      this.updateProduct.controls.category.setValue(this?.productList?.category);
+      this.updateProduct.controls.pdesc.setValue(this?.productList?.pdesc)
+    })
+  }
+
+  onUpdate(data:any){
     this.submitted = true;
 
-    if(this.addProduct.invalid){
+    if(this.updateProduct.invalid){
       return
     }else{
-    this.api.addcategoryProduct(data).subscribe((Objs:any)=>{
-
-      console.log("Add product data Is =>",data);
-      this.addProductmsg = 'Message : Product added successfully.'
-      setTimeout(()=>(this.addProductmsg = undefined),2500);
-      this.addProduct.reset();
-      this.submitted = false;
-    }, (err) =>{
-      console.warn(err);
+    this.api.updateProduct(this.router.snapshot.params['id'],data).subscribe((res:any)=>{
+      this.updateProduct.reset();
+      this._router.navigate(['/seller-home']);
     })
   }
   }

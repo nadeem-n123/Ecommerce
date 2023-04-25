@@ -11,7 +11,6 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AddSellerProductComponent } from './add-seller-product/add-seller-product.component';
-import { ProductListComponent } from './product-list/product-list.component';
 import { UpdateproComponent } from './updatepro/updatepro.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { UpdateproComponent } from './updatepro/updatepro.component';
     SellerAuthComponent,
     SellerHomeComponent,
     AddSellerProductComponent,
-    ProductListComponent,
     UpdateproComponent
   ],
   imports: [

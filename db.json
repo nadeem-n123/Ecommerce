@@ -15,25 +15,17 @@
   ],
   "products": [
     {
-      "pname": "chilly",
-      "price": "60",
-      "color": "green",
+      "pname": "Tomato12 ",
+      "price": "80",
+      "color": "lightgreen",
       "category": "vegetables",
-      "pdesc": "use for make food spicy",
-      "id": 1
-    },
-    {
-      "pname": "Tomato",
-      "price": "70",
-      "color": "red",
-      "category": "vegetables",
-      "pdesc": "tomato is used to cook the food",
+      "pdesc": "tomato is used to cook the food.",
       "id": 2
     },
     {
       "pname": "apple",
-      "price": "120",
-      "color": "darkred",
+      "price": "160",
+      "color": "brown",
       "category": "fruits",
       "pdesc": "apple is a delicious food",
       "id": 3
@@ -43,7 +35,7 @@
       "price": "80",
       "color": "yellow",
       "category": "fruits",
-      "pdesc": "banana is a a healthy fruits ",
+      "pdesc": "banana is a a healthy fruits. ",
       "id": 4
     },
     {
