@@ -15,10 +15,10 @@
   ],
   "products": [
     {
-      "pname": "Tomato12 ",
-      "price": "80",
-      "color": "lightgreen",
-      "category": "vegetables",
+      "pname": "Tomato",
+      "price": "90",
+      "color": "red",
+      "category": "vegetable",
       "pdesc": "tomato is used to cook the food.",
       "id": 2
     },

@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AddSellerProductComponent } from './add-seller-product/add-seller-product.component';
 import { UpdateproComponent } from './updatepro/updatepro.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UpdateproComponent } from './updatepro/updatepro.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

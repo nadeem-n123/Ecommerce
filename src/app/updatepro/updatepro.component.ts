@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UpdateproComponent implements OnInit{
 
   submitted: boolean = false;
-  addProductmsg: string|undefined;
+  updateProductmsg : string|undefined;
   productList: any;
 
   constructor(
@@ -51,7 +51,10 @@ export class UpdateproComponent implements OnInit{
       return
     }else{
     this.api.updateProduct(this.router.snapshot.params['id'],data).subscribe((res:any)=>{
+      this.updateProductmsg = 'Message : Product updated successfully.'
+      setTimeout(()=>(this.updateProductmsg = undefined),2500);
       this.updateProduct.reset();
+      this.submitted = false;
       this._router.navigate(['/seller-home']);
     })
   }
