@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProductsService } from '../Services/products.service';
 
 @Component({
-  selector: 'app-add-seller-product',
-  templateUrl: './add-seller-product.component.html',
-  styleUrls: ['./add-seller-product.component.css']
+  selector: 'app-updatepro',
+  templateUrl: './updatepro.component.html',
+  styleUrls: ['./updatepro.component.css']
 })
-export class AddSellerProductComponent implements OnInit{
+export class UpdateproComponent implements OnInit{
 
-  submitted : boolean = false;
-  addProductmsg : string|undefined;
+  submitted: boolean = false;
+  addProductmsg: string|undefined;
 
   constructor(
     private api:ProductsService
-  ){}
+    ){}
   ngOnInit(): void {
-
+    
   }
+
   addProduct = new FormGroup({
     pname : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[a-zA-Z]*')]),
     price : new FormControl('',[Validators.required,Validators.pattern('^(?:(?:\.))[0-9]*$')]),

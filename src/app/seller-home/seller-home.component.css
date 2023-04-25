@@ -1,0 +1,13 @@
+.th{
+    background-color: black;
+    color: gainsboro;
+    font-size: 18px;
+    height: 40px;
+}
+
+.message_dlt{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: brown;
+}

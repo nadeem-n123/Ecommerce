@@ -15,43 +15,43 @@
   ],
   "products": [
     {
-      "pname": "apple",
-      "price": "1220",
-      "color": "Brownred",
-      "category": "fruits",
-      "pdesc": "Please puchase it once",
+      "pname": "chilly",
+      "price": "60",
+      "color": "green",
+      "category": "vegetables",
+      "pdesc": "use for make food spicy",
       "id": 1
     },
     {
-      "pname": "Orange",
-      "price": "80",
-      "color": "orange",
-      "category": "fruits",
-      "pdesc": "this is a nagpur orange",
+      "pname": "Tomato",
+      "price": "70",
+      "color": "red",
+      "category": "vegetables",
+      "pdesc": "tomato is used to cook the food",
       "id": 2
     },
     {
-      "pname": "Oppo",
-      "price": "16599",
-      "color": "silver",
-      "category": "Phone",
-      "pdesc": "This is a best phone in the market",
+      "pname": "apple",
+      "price": "120",
+      "color": "darkred",
+      "category": "fruits",
+      "pdesc": "apple is a delicious food",
       "id": 3
     },
     {
-      "pname": "pencil",
-      "price": "8",
-      "color": "gray",
-      "category": "study",
-      "pdesc": "pencil used to write",
+      "pname": "banana",
+      "price": "80",
+      "color": "yellow",
+      "category": "fruits",
+      "pdesc": "banana is a a healthy fruits ",
       "id": 4
     },
     {
-      "pname": "tomato",
-      "price": "20",
-      "color": "red",
-      "category": "vegetables",
-      "pdesc": "used for food cooking",
+      "pname": "dates",
+      "price": "180",
+      "color": "chokolatie",
+      "category": "nuts",
+      "pdesc": "dates aur used to make health proper",
       "id": 5
     }
   ]

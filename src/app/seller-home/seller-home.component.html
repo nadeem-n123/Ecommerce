@@ -1,3 +1,27 @@
-<div>
-    <h1 class="text-center mt-4" style="color: blueviolet;">Welcome to Seller Home</h1>
-</div>
+<h1 class="text-center mt-3" style="color: blueviolet;">Product's List</h1>
+<p class="message_dlt">{{dltProductmsg}}</p>
+<table class="table table-striped mt-4">
+    <thead class="th">
+        <th>Sr.no</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Category</th>
+        <th>Product's description</th>
+        <th class="px-2">Action's</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of Products, index as i">
+        <td>{{i+1}}</td>
+        <td>{{list?.pname}}</td>
+        <td>{{list?.price}}</td>
+        <td>{{list?.color}}</td>
+        <td>{{list?.category}}</td>
+        <td>{{list?.pdesc}}</td>
+        <td>
+          <a routerLink="update"><i type="button" class="fa fa-edit" style="font-size:30px;color:green;"></i></a>
+          <i type="button" (click)="onDlt(list?.id)" class="fa fa-trash px-3" style="font-size:30px;color:darkred;"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
