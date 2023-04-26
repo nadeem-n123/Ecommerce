@@ -1,8 +1,9 @@
 .sign-up{
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 70px;
+    /* margin-bottom: 30px;
+    margin-top: 70px; */
     color: blueviolet;
+    background-color: lightgray;
 }
 
 .SignUp-toggle{

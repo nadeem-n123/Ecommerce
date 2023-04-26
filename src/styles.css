@@ -16,6 +16,7 @@ body{
     color: blueviolet;
     margin: 10px;
     text-align: center;
+    font-weight: bold;
 }
 .form-button{
     height: 35px;

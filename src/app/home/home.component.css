@@ -1,9 +1,9 @@
-.col-md-3{
+.col-sm-3{
     padding-top: 5px;
     padding-bottom: 7px;
     border: 2px solid blueviolet;
     border-radius: 8px;
-    margin: 5px;
+    margin-bottom: 20px;
 }
 .product-footer a {
     text-decoration: none;

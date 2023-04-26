@@ -1,5 +1,5 @@
 <div class="add-pro">
-    <h1 class="text-center mt-4" style="color: blueviolet;">Add Seller Product's</h1>
+    <hr><h1 class="text-center" style="color: blueviolet; background-color: lightgray;">Add Seller Product's</h1><hr>
     <p class="message_p">{{addProductmsg}}</p>
     <form [formGroup] = "addProduct" (ngSubmit)="onSubmit(addProduct.value)" class="common-form">
         <input class="form-input" type="text" placeholder="products Name" formControlName="pname" maxlength="15">

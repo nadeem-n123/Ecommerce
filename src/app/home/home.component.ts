@@ -7,8 +7,10 @@ import { ProductsService } from '../Services/products.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
+  
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/1200/400`);
   popularProduct: any;
+  trendyList: any;
 
   constructor(
     private api:ProductsService
@@ -28,6 +30,7 @@ export class HomeComponent implements OnInit{
   getTrendy(){
     this.api.trendyProducts().subscribe((res:any)=>{
       console.log("Trendy Product Is =>",res);
+      this.trendyList = res;
     })
   }
 }

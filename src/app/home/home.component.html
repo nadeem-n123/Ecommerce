@@ -12,17 +12,17 @@
 <div class="product-list-wrapper">
 	<h1 class="mt-3 mb-2" style="font-weight: bold;">Trendy Products</h1>
 	<div class="row">
-		<div class="col-sm-3">
+		<div class="col-sm-3"  *ngFor="let item of trendyList">
 		  <div class="product-item">
-			<img style="width: 260px; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU" alt="">
+			<img style="width: 255px; height: 200px;" src={{item?.img}} />
 		  </div>
 		  <div class="product-details">
-			<h6 class="name-head" style="font-weight: bold;">New Levi's Jeans</h6>
+			<h6 class="name-head" style="font-weight: bold;">{{item?.pname}}</h6>
 			<div class="product-price">
-				<h6>Price : $1600</h6>
+				<h6>Price : ${{item?.price}}</h6>
 			</div>
 			<div class="product-color">
-				<h6>Color : blue</h6>
+				<h6>Color : {{item?.color}}</h6>
 			</div>
 		  </div>
 		  <div class="product-footer">
@@ -30,133 +30,5 @@
 			<a>Add To Cart</a>
 		  </div>
 		</div>
-		<div class="col-sm-3">
-		  <div class="product-item">
-			<img style="width: 260px; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU" alt="">
-		  </div>
-		  <div class="product-details">
-			<h6 class="name-head" style="font-weight: bold;">New Levi's Jeans</h6>
-			<div class="product-price">
-				<h6>Price : $1600</h6>
-			</div>
-			<div class="product-color">
-				<h6>Color : blue</h6>
-			</div>
-		  </div>
-		  <div class="product-footer">
-			<a>View Details</a>
-			<a>Add To Cart</a>
-		  </div>
-		</div>
-		<div class="col-md-3">
-		  <div class="product-item">
-			<img style="width: 260px; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU" alt="">
-		  </div>
-		  <div class="product-details">
-			<h6 class="name-head" style="font-weight: bold;">New Levi's Jeans</h6>
-			<div class="product-price">
-				<h6>Price : $1600</h6>
-			</div>
-			<div class="product-color">
-				<h6>Color : blue</h6>
-			</div>
-		  </div>
-		  <div class="product-footer">
-			<a>View Details</a>
-			<a>Add To Cart</a>
-		  </div>
-		</div>
-		<div class="col-sm-3">
-		  <div class="product-item">
-			<img style="width: 260px; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU" alt="">
-		  </div>
-		  <div class="product-details">
-			<h6 class="name-head" style="font-weight: bold;">New Levi's Jeans</h6>
-			<div class="product-price">
-				<h6>Price : $1600</h6>
-			</div>
-			<div class="product-color">
-				<h6>Color : blue</h6>
-			</div>
-		  </div>
-		  <div class="product-footer">
-			<a>View Details</a>
-			<a>Add To Cart</a>
-		  </div>
-		</div>
-		<div class="col-sm-3">
-		  <div class="product-item">
-			<img style="width: 260px; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU" alt="">
-		  </div>
-		  <div class="product-details">
-			<h6 class="name-head" style="font-weight: bold;">New Levi's Jeans</h6>
-			<div class="product-price">
-				<h6>Price : $1600</h6>
-			</div>
-			<div class="product-color">
-				<h6>Color : blue</h6>
-			</div>
-		  </div>
-		  <div class="product-footer">
-			<a>View Details</a>
-			<a>Add To Cart</a>
-		  </div>
-		</div>
-		<div class="col-sm-3">
-		  <div class="product-item">
-			<img style="width: 260px; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU" alt="">
-		  </div>
-		  <div class="product-details">
-			<h6 class="name-head" style="font-weight: bold;">New Levi's Jeans</h6>
-			<div class="product-price">
-				<h6>Price : $1600</h6>
-			</div>
-			<div class="product-color">
-				<h6>Color : blue</h6>
-			</div>
-		  </div>
-		  <div class="product-footer">
-			<a>View Details</a>
-			<a>Add To Cart</a>
-		  </div>
-		</div>
-		<div class="col-sm-3">
-		  <div class="product-item">
-			<img style="width: 260px; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU" alt="">
-		  </div>
-		  <div class="product-details">
-			<h6 class="name-head" style="font-weight: bold;">New Levi's Jeans</h6>
-			<div class="product-price">
-				<h6>Price : $1600</h6>
-			</div>
-			<div class="product-color">
-				<h6>Color : blue</h6>
-			</div>
-		  </div>
-		  <div class="product-footer">
-			<a>View Details</a>
-			<a>Add To Cart</a>
-		  </div>
-		</div>
-		<div class="col-sm-3">
-		  <div class="product-item">
-			<img style="width: 260px; height: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU" alt="">
-		  </div>
-		  <div class="product-details">
-			<h6 class="name-head" style="font-weight: bold;">New Levi's Jeans</h6>
-			<div class="product-price">
-				<h6>Price : $1600</h6>
-			</div>
-			<div class="product-color">
-				<h6>Color : blue</h6>
-			</div>
-		  </div>
-		  <div class="product-footer">
-			<a>View Details</a>
-			<a>Add To Cart</a>
-		  </div>
-		</div>
-		
-		
 	</div>
 </div>

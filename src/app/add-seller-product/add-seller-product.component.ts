@@ -20,7 +20,7 @@ export class AddSellerProductComponent implements OnInit{
   }
   addProduct = new FormGroup({
     pname : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern('[ a-zA-Z0-9]*')]),
-    price : new FormControl('',[Validators.required,Validators.pattern('^(?:(?:\.))[0-9]*$')]),
+    price : new FormControl('',[Validators.required,Validators.pattern('^(?:(?:\.))[0-9,]*$')]),
     color : new FormControl('',Validators.required),
     category : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20)]),
     pdesc : new FormControl('',Validators.pattern('[ a-zA-Z.]*')),
