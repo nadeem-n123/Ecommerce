@@ -15,12 +15,19 @@ export class HomeComponent implements OnInit{
   ){}
   ngOnInit(): void {
     this.getPopular();
+    this.getTrendy();
   }
 
   getPopular(){
     this.api.popularProducts().subscribe((res:any)=>{
       console.log("Popular Products Is=>",res);
       this.popularProduct = res;
+    })
+  }
+
+  getTrendy(){
+    this.api.trendyProducts().subscribe((res:any)=>{
+      console.log("Trendy Product Is =>",res);
     })
   }
 }

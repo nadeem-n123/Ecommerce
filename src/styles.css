@@ -2,16 +2,12 @@
 body{
     font-family: sans-serif;
 }
-.container{
-    margin-left: 3%;
-    margin-right: 3%;
-}
 .common-form{
     /* text-align: center; */
     display: flex;
     margin: auto;
     flex-direction: column;
-    width: 450px;
+    width: 480px;
 }
 .form-input{
     height: 35px;
