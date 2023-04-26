@@ -23,7 +23,8 @@ export class AddSellerProductComponent implements OnInit{
     price : new FormControl('',[Validators.required,Validators.pattern('^(?:(?:\.))[0-9]*$')]),
     color : new FormControl('',Validators.required),
     category : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20)]),
-    pdesc : new FormControl('',Validators.pattern('[ a-zA-Z.]*'))
+    pdesc : new FormControl('',Validators.pattern('[ a-zA-Z.]*')),
+    img : new FormControl('')
   })
 
   onSubmit(data:any){

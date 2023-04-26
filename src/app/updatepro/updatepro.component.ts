@@ -25,7 +25,8 @@ export class UpdateproComponent implements OnInit{
     price : new FormControl('',[Validators.required,Validators.pattern('^(?:(?:\.))[0-9]*$')]),
     color : new FormControl('',Validators.required),
     category : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(20)]),
-    pdesc : new FormControl('',Validators.pattern('[ a-zA-Z.]*'))
+    pdesc : new FormControl('',Validators.pattern('[ a-zA-Z.]*')),
+    img : new FormControl('')
   })
 
   ngOnInit(){
@@ -40,7 +41,8 @@ export class UpdateproComponent implements OnInit{
       this.updateProduct.controls.price.setValue(this?.productList?.price);
       this.updateProduct.controls.color.setValue(this?.productList?.color);
       this.updateProduct.controls.category.setValue(this?.productList?.category);
-      this.updateProduct.controls.pdesc.setValue(this?.productList?.pdesc)
+      this.updateProduct.controls.pdesc.setValue(this?.productList?.pdesc);
+      this.updateProduct.controls.img.setValue(this?.productList?.img);
     })
   }
 

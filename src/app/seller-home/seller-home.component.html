@@ -3,6 +3,7 @@
 <table class="table table-striped mt-4">
     <thead class="th">
         <th>Sr.no</th>
+        <th class="px-4">Image</th>
         <th>Product Name</th>
         <th>Price</th>
         <th>Color</th>
@@ -13,6 +14,7 @@
     <tbody>
       <tr *ngFor="let list of Products, index as i">
         <td>{{i+1}}</td>
+        <td><img src="{{list?.img}}" style="height: 50px; width: 80px;" /></td>
         <td>{{list?.pname}}</td>
         <td>{{list?.price}}</td>
         <td>{{list?.color}}</td>

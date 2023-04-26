@@ -28,4 +28,8 @@ export class ProductsService {
   updateProduct(id:any,data:any){
     return this.http.put(this.url+'/'+id,data);
   }
+
+  popularProducts(){
+    return this.http.get('http://localhost:3000/products?_limit=5');
+  }
 }

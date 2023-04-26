@@ -15,36 +15,76 @@
   ],
   "products": [
     {
-      "pname": "Tomato",
-      "price": "90",
-      "color": "red",
-      "category": "vegetable",
-      "pdesc": "tomato is used to cook the food.",
-      "id": 2
-    },
-    {
-      "pname": "apple",
-      "price": "160",
-      "color": "brown",
-      "category": "fruits",
-      "pdesc": "apple is a delicious food",
-      "id": 3
-    },
-    {
-      "pname": "banana",
-      "price": "80",
+      "pname": "Banana",
+      "price": "60",
       "color": "yellow",
       "category": "fruits",
-      "pdesc": "banana is a a healthy fruits. ",
-      "id": 4
+      "pdesc": "Banana is a healthy fruits for health.",
+      "img": "https://cdn11.bigcommerce.com/s-podjif72xf/images/stencil/350x350/products/10375/5881/990047__94557.1591323806.jpg?c=2",
+      "id": 7
     },
     {
-      "pname": "dates",
-      "price": "180",
-      "color": "chokolatie",
-      "category": "nuts",
-      "pdesc": "dates aur used to make health proper",
-      "id": 5
+      "pname": "Mango",
+      "price": "70",
+      "color": "yellow",
+      "category": "fruits",
+      "pdesc": "mango is the king of fruits",
+      "img": "https://assets.thehansindia.com/h-upload/2022/05/04/1290262-mango.webp",
+      "id": 8
+    },
+    {
+      "pname": "tomato",
+      "price": "30",
+      "color": "red",
+      "category": "vegetables",
+      "pdesc": "tomato is used inside most of cooking foods",
+      "img": "https://www.revivewellness.ca/wp-content/uploads/2022/02/revive-wellness-healthy-eating-848x565.jpg",
+      "id": 9
+    },
+    {
+      "pname": "iphone 14 pro",
+      "price": "120000",
+      "color": "darkgray",
+      "category": "mobile",
+      "pdesc": "iphone is ios brand",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfp64LH7UxCA2z6tqGuqeetJYYyEWkROOWDKSRrVsdWyahxLF-MNnlSy2B4fMRTp5a_OA&usqp=CAU",
+      "id": 10
+    },
+    {
+      "pname": "telephone",
+      "price": "20000",
+      "color": "black",
+      "category": "telecommunication",
+      "pdesc": "it is a way to communicate each other.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGK5RmZwvbA3TMta-vMGFL6kCU3aTUCq5Nw&usqp=CAU",
+      "id": 11
+    },
+    {
+      "pname": "jewellery set",
+      "price": "350000",
+      "color": "gold",
+      "category": "jwellery",
+      "pdesc": "gold is one of the best metal.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK8IknN64Dny-4e9uxvpgjVa0y2qfBnk5NMQ&usqp=CAU",
+      "id": 12
+    },
+    {
+      "pname": "Levis jeans",
+      "price": "1600",
+      "color": "darkblue",
+      "category": "paints",
+      "pdesc": "means used this.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU",
+      "id": 13
+    },
+    {
+      "pname": "jogger",
+      "price": "1200",
+      "color": "orange",
+      "category": "paints",
+      "pdesc": "jogger is fashionable jeans.",
+      "img": "https://cdn.shopify.com/s/files/1/0888/4876/products/Truewerk-T1-WerkPant-Sand-FRONT_1_1024x1024.jpg?v=1649888386",
+      "id": 14
     }
   ]
 }

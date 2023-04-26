@@ -1,0 +1,15 @@
+.col-md-3{
+    padding-top: 5px;
+    padding-bottom: 7px;
+    border: 2px solid blueviolet;
+    border-radius: 8px;
+}
+.product-footer a {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+    padding: 5px;
+}
