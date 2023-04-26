@@ -37,15 +37,32 @@
 .nav .nav-search input{
     flex: 1;
     color: blueviolet;
-    border: 1px solid blueviolet;
+    border: 2px solid blueviolet;
     height: 35px;
     border-right: 0px;
     padding-left: 10px;
 }
 .nav .nav-search button{
     color: blueviolet;
-    border: 1px solid blueviolet;
+    border: 2px solid blueviolet;
     height: 35px;
     padding-left: 10px;
     font-weight: bold;
+}
+.suggested-result{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    top: 79px;
+    border: 1px solid blueviolet;
+}
+.suggested-result li {
+    border: 1px solid #fff;
+    padding: 5px;
+}
+.suggested-result li a{
+    cursor: pointer;
+    color: blueviolet;
 }

@@ -1,0 +1,15 @@
+<div class="row search-item" *ngFor="let item of searchList">
+    <div class="col-sm-3">
+        <img src="{{item?.img}}" alt="">
+    </div>
+    <div class="col-sm-8 detail">
+        <h4>{{item?.pname}}</h4>
+        <p><b style="color:darkred;">Price :</b> ${{item?.price}}</p>
+        <p><span><b style="color:darkred;">Color :</b> {{item?.color}}</span><span><b style="color:darkred;"> Category :</b> {{item?.category}}</span></p>
+        <p class="mb-3"><b style="color:darkred;">Description :</b> {{item?.pdesc}}</p>
+        <div class="product-footer">
+			<a class="vd">View Details</a>
+			<a class="ac">Add To Cart</a>
+		  </div>
+    </div>
+</div>

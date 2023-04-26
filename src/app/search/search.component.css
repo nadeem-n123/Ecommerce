@@ -1,0 +1,40 @@
+.search-item{
+    margin: 25px auto;
+    width: 800px;
+    border-top: 2px solid lightgray;
+    padding: 10px;
+}
+.search-item img{
+    width: 100%;
+    object-fit: contain;
+    height: 180px;
+}
+.search-item h4{
+    font-size: 20px;
+    margin: 5px;
+    color: blueviolet;
+}
+.search-item p{
+    margin: 5px;
+}
+.search-item span{
+    margin-right: 10px;
+}
+.product-footer .vd {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+    color: green;
+    border: 1px solid green;
+    padding: 5px;
+}
+.product-footer .ac {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+    color: rgb(235, 24, 24);
+    border: 1px solid rgb(235, 24, 24);
+    padding: 5px;
+}

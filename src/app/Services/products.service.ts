@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class ProductsService {
 
   url = 'http://localhost:3000/products';
+  
   constructor(private http:HttpClient) { }
 
   addcategoryProduct(data:any){
