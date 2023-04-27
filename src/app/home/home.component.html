@@ -1,7 +1,9 @@
 <ngb-carousel class="mt-4">
 	<ng-template *ngFor="let item of popularProduct" ngbSlide>
 		<div class="picsum-img-wrapper">
-			<img src="{{item?.img}}" style="width: 1200px; height: 500px;"/>
+			<a routerLink="/product-detail/{{item?.id}}">
+				<img src="{{item?.img}}" style="width: 1200px; height: 500px;"/>
+			</a>
 		</div>
 		<div class="carousel-caption">
 			<h3>{{item?.pname}}</h3>
@@ -10,11 +12,13 @@
 	</ng-template>
 </ngb-carousel>
 <div class="product-list-wrapper">
-	<h1 class="mt-3 mb-2" style="font-weight: bold;">Trendy Products</h1>
+	<h1 class="mt-4 mb-4" style="font-weight: bold;">Trendy Products</h1>
 	<div class="row">
 		<div class="col-sm-3"  *ngFor="let item of trendyList">
 		  <div class="product-item">
-			<img style="width: 255px; height: 200px;" src={{item?.img}} />
+			<a routerLink="/product-detail/{{item?.id}}">
+				<img style="width: 255px; height: 200px;" src={{item?.img}} />
+			</a>
 		  </div>
 		  <div class="product-details">
 			<h6 class="name-head" style="font-weight: bold;">{{item?.pname}}</h6>
@@ -26,7 +30,7 @@
 			</div>
 		  </div>
 		  <div class="product-footer">
-			<a>View Details</a>
+			<a routerLink="/product-detail/{{item?.id}}">View Details</a>
 			<a>Add To Cart</a>
 		  </div>
 		</div>

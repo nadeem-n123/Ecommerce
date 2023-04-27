@@ -2,7 +2,7 @@
     <hr><h1 class="text-center" style="color: blueviolet; background-color: lightgray;">Add Seller Product's</h1><hr>
     <p class="message_p">{{addProductmsg}}</p>
     <form [formGroup] = "addProduct" (ngSubmit)="onSubmit(addProduct.value)" class="common-form">
-        <input class="form-input" type="text" placeholder="products Name" formControlName="pname" maxlength="15">
+        <input class="form-input" type="text" placeholder="products Name" formControlName="pname" maxlength="25">
         <span class="form-text text-danger px-2" *ngIf="submitted && addProduct.controls.pname.errors">
             <span *ngIf="submitted && addProduct.controls.pname.errors['required']">
                 Product name is required.

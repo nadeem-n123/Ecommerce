@@ -1,1 +1,26 @@
-<p>product-detail works!</p>
+<div class="row product-details" *ngIf="productDetail">
+    <div class="col-sm-6">
+        <img class="pro-image" src="{{productDetail?.img}}" alt="">
+    </div>
+<div class="col-sm-6">
+    <div class="detail">
+        <h2 style="color: green; font-weight: bold;">Product Name : {{productDetail?.pname}}</h2>
+        <h3><b>Price :</b> ${{productDetail?.price}}</h3>
+        <div>
+            Color :
+            <h5 [style.backgroundColor]="productDetail?.color" class="pro-color"></h5>
+        </div>
+        <h6><b>Category :</b> {{productDetail?.category}}</h6>
+        <h6><b>Description :</b> {{productDetail?.pdesc}}</h6>
+        <div class="product-footer mt-4">
+			<a class="vd">Add To Cart</a>
+			<a class="ac">Buy Now</a>
+            <div class="quantity-group mt-2">
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
+            </div>
+        </div>
+        </div>
+</div>
+</div>
