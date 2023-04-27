@@ -7,7 +7,7 @@
         <button type="button" (click)="onSearch(searchInput.value)">Search</button>
         <ul class="suggested-result" *ngIf="searchResult">
             <li *ngFor="let item of searchResult">
-                <a href="">{{item?.pname}}</a>
+                <a (mousedown)="redirectToDetail(item?.id)">{{item?.pname}}</a>
             </li>
         </ul>
     </div>

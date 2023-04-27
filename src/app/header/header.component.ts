@@ -64,4 +64,8 @@ export class HeaderComponent implements OnInit{
   onSearch(val:string){
     this._router.navigate([`search/${val}`])
   }
+
+  redirectToDetail(id:any){
+    this._router.navigate(['product-detail/'+id])
+  }
 }

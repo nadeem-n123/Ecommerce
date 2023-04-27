@@ -10,6 +10,7 @@ import { ProductsService } from '../Services/products.service';
 export class ProductDetailComponent implements OnInit{
 
   productDetail: undefined | any;
+  productQuantity: number = 1;
 
   constructor(
     private route:ActivatedRoute,
@@ -24,6 +25,14 @@ export class ProductDetailComponent implements OnInit{
     productId && this.api.getCurrentProduct(productId).subscribe((Objs:any)=>{
       this.productDetail = Objs;
     })
+  }
+
+  handleQuantity(val:string){
+    if(this.productQuantity<10 && val==='plus'){
+      this.productQuantity++;
+    }else if(this.productQuantity>1 && val==='min'){
+      this.productQuantity--;
+    }
   }
 
 }
