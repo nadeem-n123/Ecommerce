@@ -43,10 +43,10 @@
         </form>
     </div>
 
-    <!-- Login Seller Page Start -->
+    <!-- Login user Page Start -->
     <div *ngIf="showLogin">
         <hr><h1 class="sign-up">User Login</h1><hr>
-        <p class="text-danger text-center">{{authError}}</p>
+        <p class="text-danger text-center"><b>{{authError}}</b></p>
         <form [formGroup]="Login" (ngSubmit)="loginUser(Login.value)" class="common-form">
             <input class="form-input" type="email" placeholder="Email" formControlName="email">
                 <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.email.errors">
@@ -73,5 +73,5 @@
             <a type="button" class="Login-toggle mt-3 px-2" (click)="openSignUp()"><span style="color: #bfd30b;"> Don't have an account ?</span> SignUp</a>
         </form>
     </div>
-    <!-- Login Seller page End -->
+    <!-- Login user page End -->
 </div>

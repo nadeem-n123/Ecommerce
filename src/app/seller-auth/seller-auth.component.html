@@ -46,7 +46,7 @@
     <!-- Login Seller Page Start -->
     <div *ngIf="showLogin">
         <hr><h1 class="sign-up">Seller Login</h1><hr>
-        <p class="text-danger text-center">{{authError}}</p>
+        <p class="text-danger text-center"><b>{{authError}}</b></p>
         <form [formGroup]="Login" (ngSubmit)="loginSubmit(Login.value)" class="common-form">
             <input class="form-input" type="email" placeholder="Email" formControlName="email">
                 <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.email.errors">

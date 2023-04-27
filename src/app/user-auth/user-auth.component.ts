@@ -17,12 +17,12 @@ export class UserAuthComponent {
 
   constructor(
     private _api:UserService,
-    private seller:SellerService,
+    private user:UserService,
     private _router:Router
   ){}
 
   ngOnInit(): void {
-    // this.seller.reloadSeller()
+    this._api.reloaduser();
   }
 
   SignUp = new FormGroup({
@@ -49,13 +49,13 @@ export class UserAuthComponent {
   })
 
   loginUser(data:any){
-    // this.authError='';
-    // this.seller.sellerLogin(data);
-    // this.seller.IsloginFailed.subscribe((isError:any)=>{
-    //   if(isError){
-    //     this.authError='! Incorrect Email and password.'
-    //   }
-    // })
+    this.authError='';
+    this.user.userLogin(data);
+    this.user.IsloginFailed.subscribe((isError:any)=>{
+      if(isError){
+        this.authError='! Please Enter Correct Email and password.'
+      }
+    })
   }
 
   openLogin(){

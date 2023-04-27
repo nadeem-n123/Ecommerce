@@ -13,7 +13,7 @@
     </div>
     <div [ngSwitch]="menuType">
         <ul *ngSwitchCase="'default'">
-            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="">Home</a></li>
             <li><a routerLink="seller-auth">Seller</a></li>
             <li><a href="#"><i class="fa fa-cart-plus"></i> Cart(0)</a></li>
             <li><a routerLink="user-auth"><i class="fa fa-sign-in"></i> Login/SignUp</a></li>
@@ -21,8 +21,15 @@
         <ul *ngSwitchCase="'seller'">
             <li><a routerLink="add-seller">Add Product</a></li>
             <li><a routerLink="seller-home">Product List</a></li>
-            <li><a class="px-1" style="color: darkcyan; border: 2px solid darkcyan;" type="button" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a></li>
+            <li><a class="px-1" style="color: darkcyan; border: 2px solid darkcyan;" type="button" (click)="sellerlogout()"><i class="fa fa-sign-out"></i> Logout</a></li>
             <li><a class="px-1 py-2" style="color: darkred; border: 2px solid darkred;"><i class="fa fa-user"></i> {{sellerName}}</a></li>
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="seller-home">Seller</a></li>
+            <li><a href="#"><i class="fa fa-cart-plus"></i> Cart(0)</a></li>
+            <li><a class="px-1" style="color: darkcyan; border: 2px solid darkcyan;" type="button" (click)="Userlogout()"><i class="fa fa-sign-out"></i> Logout</a></li>
+            <li><a class="px-1 py-2" style="color: darkred; border: 2px solid darkred;"><i class="fa fa-user"></i> {{userName}}</a></li>
         </ul>
     </div>
 </nav>
