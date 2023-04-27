@@ -25,6 +25,7 @@ export class SellerService {
           this._router.navigate(['/seller-home']);
         });
     }
+    
     reloadSeller(){
       if(localStorage.getItem('seller')){
         this.IsSellerLoggedIn.next(true);

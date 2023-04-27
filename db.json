@@ -76,15 +76,14 @@
       "pdesc": "compfy casual is the best company into the market of shoes.",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSrLgL7P5Os6dYytdiR4pN1W85ZLI4wxzmJdRaiH04xSEFkK9Vi5To1Izh5SIrKZtNCLE&usqp=CAU",
       "id": 19
-    },
+    }
+  ],
+  "users": [
     {
-      "pname": "whirlphool gadget",
-      "price": "22,000",
-      "color": "silver",
-      "category": "Kitchen",
-      "pdesc": "Fridge is used to cool the water and other foody material.",
-      "img": "https://cdn.thewirecutter.com/wp-content/media/2021/09/refrigerators-2048px-whirlpool-WRF535SWHZ.jpg?auto=webp&quality=60&crop=1.91:1&width=1200",
-      "id": 20
+      "name": "ahmad",
+      "email": "ahmad009@user.com",
+      "password": "009009",
+      "id": 1
     }
   ]
 }

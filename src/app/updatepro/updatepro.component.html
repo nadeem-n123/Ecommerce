@@ -2,7 +2,7 @@
     <hr><h1 class="text-center" style="color: blueviolet; background-color: lightgray;">Update Seller Product's</h1><hr>
     <p class="message_p">{{updateProductmsg}}</p>
     <form [formGroup] = "updateProduct" (ngSubmit)="onUpdate(updateProduct.value)" class="common-form">
-        <input class="form-input" type="text" placeholder="products Name" formControlName="pname" maxlength="15">
+        <input class="form-input" type="text" placeholder="products Name" formControlName="pname" maxlength="25">
         <span class="form-text text-danger px-2" *ngIf="submitted && updateProduct.controls.pname.errors">
             <span *ngIf="submitted && updateProduct.controls.pname.errors['required']">
                 Product name is required.

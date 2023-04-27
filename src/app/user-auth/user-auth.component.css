@@ -1,0 +1,16 @@
+.sign-up{
+    text-align: center;
+    /* margin-bottom: 30px;
+    margin-top: 70px; */
+    color: blueviolet;
+    background-color: lightgray;
+}
+
+.SignUp-toggle{
+    text-decoration: none;
+    font-size: 16px;
+}
+.Login-toggle{
+    text-decoration: none;
+    font-size: 16px;
+}

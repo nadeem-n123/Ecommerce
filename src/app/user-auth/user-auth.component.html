@@ -1,0 +1,77 @@
+<div class="seller-auth">
+    <div *ngIf="!showLogin">
+        <hr><h1 class="sign-up">User-Sign-Up</h1><hr>
+        <form [formGroup]="SignUp" (ngSubmit)="signUpUser(SignUp.value)" class="common-form">
+            <input class="form-input" type="text" placeholder="Name" formControlName="name" maxlength="15">
+                <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.name.errors">
+                    <span *ngIf="submitted && SignUp.controls.name.errors['required']">
+                        Name is required.
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.name.errors['minlength']">
+                        Minimum length to be atleast 3 character. 
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.name.errors['maxlength']">
+                        Maximum length allowed to be 15 character's only.
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.name.errors['pattern']">
+                        ! Please enter a valid name.
+                    </span>
+                </span>
+            <input class="form-input" type="email" placeholder="Email" formControlName="email">
+                <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.email.errors">
+                    <span *ngIf="submitted && SignUp.controls.email.errors['required']">
+                        Email is Required.
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.email.errors['pattern']">
+                        ! Please enter a valid email.
+                    </span>
+                </span>
+            <input class="form-input" type="password" placeholder="Password" formControlName="password" maxlength="8">
+                <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.password.errors">
+                    <span *ngIf="submitted && SignUp.controls.password.errors['required']">
+                        Password is required.
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.password.errors['minlength']">
+                        Password atleast 6 character.
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.password.errors['maxlength']">
+                        Maximum length allowed only 8 character. ! Password should contain 0-9,a-zA-Z character and $ special character.
+                    </span>
+                </span>
+            <button class="form-button">SignUp</button>
+            <a type="button" class="SignUp-toggle mt-3 px-2" (click)="openLogin()"> <span style="color: #bfd30b;">Already have an account ?</span> Login</a>
+        </form>
+    </div>
+
+    <!-- Login Seller Page Start -->
+    <div *ngIf="showLogin">
+        <hr><h1 class="sign-up">User Login</h1><hr>
+        <p class="text-danger text-center">{{authError}}</p>
+        <form [formGroup]="Login" (ngSubmit)="loginUser(Login.value)" class="common-form">
+            <input class="form-input" type="email" placeholder="Email" formControlName="email">
+                <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.email.errors">
+                    <span *ngIf="submitted && SignUp.controls.email.errors['required']">
+                        Email is Required.
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.email.errors['pattern']">
+                        ! Please enter a valid email.
+                    </span>
+                </span>
+            <input class="form-input" type="password" placeholder="Password" formControlName="password" maxlength="8">
+                <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.password.errors">
+                    <span *ngIf="submitted && SignUp.controls.password.errors['required']">
+                        Password is required.
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.password.errors['minlength']">
+                        Password atleast 6 character.
+                    </span>
+                    <span *ngIf="submitted && SignUp.controls.password.errors['maxlength']">
+                        Maximum length allowed only 8 character. ! Password should contain 0-9,a-zA-Z character and $ special character.
+                    </span>
+                </span>
+            <button class="form-button">Login</button>
+            <a type="button" class="Login-toggle mt-3 px-2" (click)="openSignUp()"><span style="color: #bfd30b;"> Don't have an account ?</span> SignUp</a>
+        </form>
+    </div>
+    <!-- Login Seller page End -->
+</div>
