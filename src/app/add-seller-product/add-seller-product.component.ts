@@ -16,7 +16,6 @@ export class AddSellerProductComponent implements OnInit{
     private api:ProductsService
   ){}
   ngOnInit(): void {
-
   }
   addProduct = new FormGroup({
     pname : new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(25),Validators.pattern('[ a-zA-Z0-9]*')]),
@@ -36,7 +35,7 @@ export class AddSellerProductComponent implements OnInit{
     this.api.addcategoryProduct(data).subscribe((Objs:any)=>{
 
       console.log("Add product data Is =>",data);
-      this.addProductmsg = 'Message : Product added successfully.'
+      this.addProductmsg = 'Success : Product added successfully.'
       setTimeout(()=>(this.addProductmsg = undefined),2500);
       this.addProduct.reset();
       this.submitted = false;

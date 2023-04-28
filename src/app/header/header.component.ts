@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit{
   sellerName : string ='';
   searchResult : any | undefined;
   userName: string ='';
+  cartCount: any = 0;
 
   constructor(
     private _router:Router,
@@ -39,13 +40,19 @@ export class HeaderComponent implements OnInit{
           this.menuType = "default";
         }
       }
-    })
+    });
+
+    let cartData = localStorage.getItem('exitCart');
+    if(cartData){
+      this.cartCount = JSON.parse(cartData).length;
+    }
   }
 
   sellerlogout(){
     localStorage.removeItem('seller');
     this._router.navigate(['seller-auth']);
   }
+
   Userlogout(){
     localStorage.removeItem('user');
     this._router.navigate(['user-auth']);

@@ -53,7 +53,7 @@ export class UpdateproComponent implements OnInit{
       return
     }else{
     this.api.updateProduct(this.router.snapshot.params['id'],data).subscribe((res:any)=>{
-      this.updateProductmsg = 'Message : Product updated successfully.'
+      this.updateProductmsg = 'Success : Product updated successfully.'
       setTimeout(()=>(this.updateProductmsg = undefined),2500);
       this.updateProduct.reset();
       this.submitted = false;

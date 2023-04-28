@@ -11,6 +11,7 @@ export class ProductDetailComponent implements OnInit{
 
   productDetail: undefined | any;
   productQuantity: number = 1;
+  cartPopup: string | undefined;
 
   constructor(
     private route:ActivatedRoute,
@@ -32,6 +33,18 @@ export class ProductDetailComponent implements OnInit{
       this.productQuantity++;
     }else if(this.productQuantity>1 && val==='min'){
       this.productQuantity--;
+    }
+  }
+
+  Addtocart(){
+    if(this.productDetail){
+      this.productDetail.quantity = this.productQuantity;
+      if(!localStorage.getItem('user')){
+        console.log(this.productDetail);
+        this.api.localAddToCart(this.productDetail);
+        this.cartPopup = "Success : Cart Added Successfully.";
+        setTimeout(()=>(this.cartPopup = undefined),2500);
+      }
     }
   }
 

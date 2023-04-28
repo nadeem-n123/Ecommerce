@@ -49,26 +49,7 @@
         <p class="text-danger text-center"><b>{{authError}}</b></p>
         <form [formGroup]="Login" (ngSubmit)="loginSubmit(Login.value)" class="common-form">
             <input class="form-input" type="email" placeholder="Email" formControlName="email">
-                <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.email.errors">
-                    <span *ngIf="submitted && SignUp.controls.email.errors['required']">
-                        Email is Required.
-                    </span>
-                    <span *ngIf="submitted && SignUp.controls.email.errors['pattern']">
-                        ! Please enter a valid email.
-                    </span>
-                </span>
             <input class="form-input" type="password" placeholder="Password" formControlName="password" maxlength="8">
-                <span class="form-text text-danger px-2" *ngIf="submitted && SignUp.controls.password.errors">
-                    <span *ngIf="submitted && SignUp.controls.password.errors['required']">
-                        Password is required.
-                    </span>
-                    <span *ngIf="submitted && SignUp.controls.password.errors['minlength']">
-                        Password atleast 6 character.
-                    </span>
-                    <span *ngIf="submitted && SignUp.controls.password.errors['maxlength']">
-                        Maximum length allowed only 8 character. ! Password should contain 0-9,a-zA-Z character and $ special character.
-                    </span>
-                </span>
             <button class="form-button">Login</button>
             <a type="button" class="Login-toggle mt-3 px-2" (click)="openSignUp()"><span style="color: #bfd30b;"> Don't have an account ?</span> SignUp</a>
         </form>

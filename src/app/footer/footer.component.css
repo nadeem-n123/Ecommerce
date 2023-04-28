@@ -1,0 +1,30 @@
+ul{
+    margin: 0;
+    padding: 0;
+}
+.footer{
+    text-align: center;
+    position: fixed;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+}
+.footer ul{
+    padding-top: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.footer ul li a{
+    font-weight: bold;
+    color: blueviolet;
+    padding: 10px;
+    text-decoration: none;
+}
+.footer-copyright{
+    color: beige;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
