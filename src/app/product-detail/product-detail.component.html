@@ -1,5 +1,5 @@
 <div class="row product-details" *ngIf="productDetail">
-    <p class="cartPopup">{{cartPopup}}</p>
+    <!-- <p class="cartPopup">{{cartPopup}}</p> -->
     <div class="col-sm-6">
         <img class="pro-image" src="{{productDetail?.img}}" alt="">
     </div>
@@ -14,8 +14,9 @@
         <h6><b>Category :</b> {{productDetail?.category}}</h6>
         <h6><b>Description :</b> {{productDetail?.pdesc}}</h6>
         <div class="product-footer mt-4">
-			<a class="vd" (click)="Addtocart()">Add To Cart</a>
-			<a class="ac">Buy Now</a>
+            <a class="ac">Buy Now</a>
+			<a *ngIf="!removeCart" class="vd" (click)="Addtocart()">Add To Cart</a>
+			<a *ngIf="removeCart" class="vd" (click)="removecart(productDetail?.id)">Remove Cart</a>
             <div class="quantity-group mt-2">
                 <button (click)="handleQuantity('min')">-</button>
                 <input type="text" value="{{productQuantity}}">

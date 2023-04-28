@@ -3,7 +3,7 @@
     font-size: 35px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    background: -webkit-linear-gradient( cyan,red,black);
+    background: -webkit-linear-gradient( cyan,green,black);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -33,14 +33,14 @@
 .product-footer .vd {
     background-color: green;
     border: 1px solid green;
-    color: white;
     border-radius: 10px;
-    text-decoration: none;
+    color: white;
     cursor: pointer;
     padding: 10px;
+    margin-left: 25px;
+    text-decoration: none;
 }
 .product-footer .ac {
-    margin-left: 25px;
     background-color:rgb(235, 24, 24);
     border: 1px solid rgb(235, 24, 24);
     color: white;

@@ -46,6 +46,9 @@ export class HeaderComponent implements OnInit{
     if(cartData){
       this.cartCount = JSON.parse(cartData).length;
     }
+    this.api.incCartCount.subscribe((items)=>{
+      this.cartCount = items.length;
+    })
   }
 
   sellerlogout(){
