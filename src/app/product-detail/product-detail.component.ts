@@ -42,7 +42,7 @@ export class ProductDetailComponent implements OnInit{
     })
   }
 
-  // To increase and decrease product quantity
+  // To increase and decrease product quantity.
   handleQuantity(val:string){
     if(this.productQuantity<10 && val==='plus'){
       this.productQuantity++;
@@ -51,7 +51,7 @@ export class ProductDetailComponent implements OnInit{
     }
   }
 
-  // Function for Add to Cart
+  // Function for Add to Cart.
   Addtocart(){
     if(this.productDetail){
       this.productDetail.quantity = this.productQuantity;
@@ -77,7 +77,7 @@ export class ProductDetailComponent implements OnInit{
     }
   }
 
-  // Function For Remove To Cart
+  // Function For Remove To Cart.
   removecart(id:number){  
     this.api.localRemoveToCart(id);
     this.removeCart = false;
