@@ -3,16 +3,21 @@
     padding-bottom: 7px;
     border: 2px solid blueviolet;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 .product-footer a {
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
     margin: 10px;
     cursor: pointer;
     color: blueviolet;
     border: 1px solid blueviolet;
     padding: 5px;
+}
+.product-footer a:hover {
+    background-color: blueviolet;
+    color: beige;
 }
 .product-details {
     margin-top: 15px;

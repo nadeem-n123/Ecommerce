@@ -28,3 +28,8 @@ ul{
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
+.footer-copyright span{
+    background: -webkit-linear-gradient(beige,red,beige);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
