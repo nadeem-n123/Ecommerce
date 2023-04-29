@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { Signup, login } from '../data-type';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ export class UserService {
     private _router:Router
     ) { }
 
-  userSignUp(data:any){
-    this.http.post(`${this.url}`,data,{observe:'response'})
+  userSignUp(user:Signup){
+    this.http.post(`${this.url}`,user,{observe:'response'})
     .subscribe((res:any)=>{
       if(res){
         localStorage.setItem('user',JSON.stringify(res.body));
@@ -33,10 +34,11 @@ export class UserService {
     }
   }
 
-  userLogin(data : any){
-    this.http.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,{observe : 'response'})
-    .subscribe((res:any)=>{
-      if(res && res.body && res.body.length){
+  userLogin(data:login){
+    this.http.get<Signup[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,{observe : 'response'})
+    .subscribe((res)=>{
+      if(res && res.body?.length){
+        this.IsloginFailed.emit(false);
         localStorage.setItem('user',JSON.stringify(res.body[0]))
         this._router.navigate(['/']);
       }else{

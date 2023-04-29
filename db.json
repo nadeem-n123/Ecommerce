@@ -80,9 +80,9 @@
   ],
   "users": [
     {
-      "name": "ahmad",
-      "email": "ahmad009@user.com",
-      "password": "009009",
+      "name": "Ahmad",
+      "email": "ahmad1@user.com",
+      "password": "ahmad05",
       "id": 1
     },
     {
@@ -90,18 +90,6 @@
       "email": "alex1@user.com",
       "password": "alex005",
       "id": 2
-    },
-    {
-      "name": "jhon",
-      "email": "jhon12@user.com",
-      "password": "jhon250",
-      "id": 3
-    },
-    {
-      "name": "saleem",
-      "email": "saleem1@user.com",
-      "password": "saleem00",
-      "id": 4
     }
   ],
   "cart": [

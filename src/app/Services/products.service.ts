@@ -29,43 +29,43 @@ export class ProductsService {
   }
 
   updateProduct(id:any,data:any){
-    return this.http.put(this.url+'/'+id,data);
+    return this.http.put<product>(this.url+'/'+id,data);
   }
 
   popularProducts(){
-    return this.http.get('http://localhost:3000/products?_limit=5');
+    return this.http.get<product[]>('http://localhost:3000/products?_limit=5');
   }
 
   trendyProducts(){
-    return this.http.get('http://localhost:3000/products?_limit=8');
+    return this.http.get<product[]>('http://localhost:3000/products?_limit=8');
   }
 
   // This function used to match data from DB and search input fields
   searchProducts(querry : string){
-    return this.http.get(`http://localhost:3000/products?q=${querry}`);
+    return this.http.get<product[]>(`http://localhost:3000/products?q=${querry}`);
   }
 
   // Api for Add to cart Data
-  localAddToCart(data:any){
+  localAddToCart(data:product){
     let cartData = [];
-    let exitCart = localStorage.getItem('exitCart');
-    if(!exitCart){
-      localStorage.setItem('exitCart', JSON.stringify([data]));
+    let localCartexit = localStorage.getItem('localCartexit');
+    if(!localCartexit){
+      localStorage.setItem('localCartexit', JSON.stringify([data]));
     }else{
-      cartData = JSON.parse(exitCart);
+      cartData = JSON.parse(localCartexit);
       cartData.push(data)
-      localStorage.setItem('exitCart',JSON.stringify(cartData));
+      localStorage.setItem('localCartexit',JSON.stringify(cartData));
     }
     this.incCartCount.emit(cartData);
   }
 
   // Api for Remove Cart Data
   localRemoveToCart(productId:number){
-    let cartData = localStorage.getItem('exitCart');
+    let cartData = localStorage.getItem('localCartexit');
     if(cartData){
        let items = JSON.parse(cartData);
        items = items.filter((item:any)=>productId!==item.id);
-       localStorage.setItem('exitCart',JSON.stringify(items));
+       localStorage.setItem('localCartexit',JSON.stringify(items));
        this.incCartCount.emit(items);
     }
   }

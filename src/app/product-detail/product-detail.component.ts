@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../Services/products.service';
-import { cart } from '../data-type';
+import { cart, product } from '../data-type';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,7 +10,7 @@ import { cart } from '../data-type';
 })
 export class ProductDetailComponent implements OnInit{
 
-  productDetail: undefined | any;
+  productDetail: undefined | product;
   productQuantity: number = 1;
   cartPopup: string | undefined;
   removeCart: boolean = false;
@@ -51,7 +51,7 @@ export class ProductDetailComponent implements OnInit{
     }
   }
 
-  // Function for Add to Cart.
+  // Function for Add to Cart into localStorage.
   Addtocart(){
     if(this.productDetail){
       this.productDetail.quantity = this.productQuantity;
