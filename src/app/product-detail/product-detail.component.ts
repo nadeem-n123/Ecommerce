@@ -72,12 +72,15 @@ export class ProductDetailComponent implements OnInit{
         }
         delete cartData.id;
         this.api.dbAddToCart(cartData).subscribe((res)=>{
+          if(res){
+          alert('Product added in cart successfully.');
+          }
         })
       }
     }
   }
 
-  // Function For Remove To Cart.
+  // Function For Remove 
   removecart(id:number){  
     this.api.localRemoveToCart(id);
     this.removeCart = false;

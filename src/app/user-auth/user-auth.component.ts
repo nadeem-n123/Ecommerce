@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SellerService } from '../Services/seller.service';
 import { UserService } from '../Services/user.service';
-import { cart } from '../data-type';
+import { cart, product } from '../data-type';
 import { ProductsService } from '../Services/products.service';
 
 @Component({
@@ -57,10 +57,9 @@ export class UserAuthComponent {
     this.user.IsloginFailed.subscribe((isError: any) => {
       if (isError) {
         this.authError = '! Please Enter Valid Credentials.'
-      } else {
-        this.localToDbCart();
       }
     })
+    this.localToDbCart();
   }
 
   openLogin() {
@@ -74,12 +73,10 @@ export class UserAuthComponent {
   localToDbCart() {
     let data = localStorage.getItem('exitCart');
     let userData = localStorage.getItem('user');
-    console.log("project Data",userData);
     let userId = userData && JSON.parse(userData).id;
     if(data){
       let cartDataList:any[] = JSON.parse(data);
-      cartDataList.forEach((product: any,index :any) => {
-        
+      cartDataList.forEach((product:product,index) => {
         let cartData:cart = {
           ...product,
           productId:product.id,
@@ -93,14 +90,14 @@ export class UserAuthComponent {
             console.log("Local cart data added into");
           }
         })
-        if(cartDataList.length===index+1){
-          localStorage.removeItem('exitCart');
-        }
-       },500);
+      },500);
+      if(cartDataList.length===index+1){
+        localStorage.removeItem('exitCart');
+      }
       });
     }
     setTimeout(()=>{
-      this.service.getCartList(userId)
+      this.service.getCartList(userId);
     },2000);
   }
 }
