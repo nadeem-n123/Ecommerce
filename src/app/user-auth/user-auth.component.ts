@@ -74,11 +74,13 @@ export class UserAuthComponent {
   localToDbCart() {
     let data = localStorage.getItem('exitCart');
     let userData = localStorage.getItem('user');
+    console.log("project Data",userData);
     let userId = userData && JSON.parse(userData).id;
     if(data){
       let cartDataList:any[] = JSON.parse(data);
       cartDataList.forEach((product: any,index :any) => {
-        let cartData: cart={
+        
+        let cartData:cart = {
           ...product,
           productId:product.id,
           userId
@@ -88,13 +90,13 @@ export class UserAuthComponent {
        setTimeout(() => {
         this.service.dbAddToCart(cartData).subscribe((res)=>{
           if(res){
-            console.log("Data added into the DataBase Cart");
+            console.log("Local cart data added into");
           }
         })
         if(cartDataList.length===index+1){
           localStorage.removeItem('exitCart');
         }
-       }, 500);
+       },500);
       });
     }
     setTimeout(()=>{

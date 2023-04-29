@@ -42,7 +42,7 @@ export class ProductDetailComponent implements OnInit{
     })
   }
 
-  // To increase and decrease product quantity.
+  // To increase and decrease product quantity. 
   handleQuantity(val:string){
     if(this.productQuantity<10 && val==='plus'){
       this.productQuantity++;

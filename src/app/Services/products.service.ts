@@ -78,7 +78,7 @@ export class ProductsService {
   getCartList(userId:number){
     return this.http.get(`http://localhost:3000/cart?userId=`+userId,{observe : 'response'})
     .subscribe((res:any)=>{
-      // this.incCartCount.emit(res);
+      this.incCartCount.emit(res);
     })
   }
 }
