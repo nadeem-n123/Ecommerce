@@ -36,6 +36,7 @@ export class HeaderComponent implements OnInit{
             let userData = userStore && JSON.parse(userStore);
             this.userName = userData.name;
             this.menuType = "user";
+            this.api.getCartList(userData.id);
          }else{
           this.menuType = "default";
         }
@@ -59,6 +60,7 @@ export class HeaderComponent implements OnInit{
   Userlogout(){
     localStorage.removeItem('user');
     this._router.navigate(['user-auth']);
+    this.api.incCartCount.emit([]);
   }
 
   searchProduct(querry : KeyboardEvent){

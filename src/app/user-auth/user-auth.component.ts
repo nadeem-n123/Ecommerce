@@ -96,8 +96,6 @@ export class UserAuthComponent {
       }
       });
     }
-    setTimeout(()=>{
-      this.service.getCartList(userId);
-    },2000);
+    this.service.getCartList(userId);
   }
 }

@@ -15,7 +15,8 @@ export interface product{
     pdesc: string,
     img: string,
     id: number,
-    quantity: undefined | number
+    quantity: undefined | number,
+    productId: undefined | number
 }
 export interface cart{
     pname: string,

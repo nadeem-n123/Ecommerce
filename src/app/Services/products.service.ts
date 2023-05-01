@@ -7,7 +7,7 @@ import { cart, product } from '../data-type';
 })
 export class ProductsService {
 
-  incCartCount = new EventEmitter<[]>();
+  incCartCount = new EventEmitter<product[]>();
   url = 'http://localhost:3000/products';
   
   constructor(private http:HttpClient) { }
@@ -46,11 +46,12 @@ export class ProductsService {
   }
 
   // Api for Add to cart Data
-  localAddToCart(data:product){
+  localAddToCart(data : product){
     let cartData = [];
     let localCartexit = localStorage.getItem('localCartexit');
     if(!localCartexit){
       localStorage.setItem('localCartexit', JSON.stringify([data]));
+      this.incCartCount.emit([data]);
     }else{
       cartData = JSON.parse(localCartexit);
       cartData.push(data)
@@ -73,6 +74,10 @@ export class ProductsService {
   // This api work AddToCart after user Login
   dbAddToCart(cartData:cart){
     return this.http.post(`http://localhost:3000/cart`,cartData);
+  }
+
+  dbRemoveToCart(cartId : number){
+    return this.http.delete(`http://localhost:3000/cart/`+cartId);
   }
 
   getCartList(userId:number){

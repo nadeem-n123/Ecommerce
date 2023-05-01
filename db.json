@@ -82,7 +82,7 @@
     {
       "name": "Ahmad",
       "email": "ahmad1@user.com",
-      "password": "ahmad05",
+      "password": "ahmad005",
       "id": 1
     },
     {
@@ -90,21 +90,15 @@
       "email": "alex1@user.com",
       "password": "alex005",
       "id": 2
+    },
+    {
+      "name": "MusheerAbbas",
+      "email": "musheer1@user.com",
+      "password": "musheer0",
+      "id": 3
     }
   ],
   "cart": [
-    {
-      "pname": "hp 1200",
-      "price": "42,000",
-      "color": "black",
-      "category": "Laptop",
-      "pdesc": "Hp is the best laptop company in the market.",
-      "img": "https://www.cnet.com/a/img/resize/01ebf2fb7a844ce940f0b1c3ddc148faddc4a6c1/hub/2022/04/27/b796792b-5b34-4405-83eb-efc66371ee06/samsung-galaxy-book-2-pro-360-01.jpg?auto=webp&fit=crop&height=900&width=1200",
-      "quantity": 1,
-      "productId": 16,
-      "userId": null,
-      "id": 1
-    },
     {
       "pname": "Neckless",
       "price": "1,50,000",
@@ -113,45 +107,33 @@
       "pdesc": "gold is the best metal related to others metal.",
       "img": "https://www.krishnajewellers.com/blog/wp-content/uploads/2021/12/Buy-Gold-Choker-Designs.jpg",
       "quantity": 1,
+      "userId": 2,
       "productId": 17,
-      "userId": null,
       "id": 2
     },
     {
-      "pname": "Levis jeans",
-      "price": "1600",
-      "color": "darkblue",
-      "category": "paints",
-      "pdesc": "means used this.",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU",
+      "pname": "Compfy casual",
+      "price": "1500",
+      "color": "brown",
+      "category": "shoes",
+      "pdesc": "compfy casual is the best company into the market of shoes.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSrLgL7P5Os6dYytdiR4pN1W85ZLI4wxzmJdRaiH04xSEFkK9Vi5To1Izh5SIrKZtNCLE&usqp=CAU",
       "quantity": 1,
       "userId": 2,
-      "productId": 13,
+      "productId": 19,
       "id": 3
     },
     {
-      "pname": "Levis jeans",
-      "price": "1600",
-      "color": "darkblue",
-      "category": "paints",
-      "pdesc": "means used this.",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU",
+      "pname": "hp 1200",
+      "price": "42,000",
+      "color": "black",
+      "category": "Laptop",
+      "pdesc": "Hp is the best laptop company in the market.",
+      "img": "https://www.cnet.com/a/img/resize/01ebf2fb7a844ce940f0b1c3ddc148faddc4a6c1/hub/2022/04/27/b796792b-5b34-4405-83eb-efc66371ee06/samsung-galaxy-book-2-pro-360-01.jpg?auto=webp&fit=crop&height=900&width=1200",
       "quantity": 1,
-      "userId": 2,
-      "productId": 13,
+      "userId": 3,
+      "productId": 16,
       "id": 4
-    },
-    {
-      "pname": "Gem neckless",
-      "price": "1,80,000",
-      "color": "lightgold",
-      "category": "jwellery",
-      "pdesc": "Gem is the product of origional metal.",
-      "img": "https://www.financialexpress.com/wp-content/uploads/2023/02/Gem-jewellery-industry-disappointed-with-Union-budget-for-2023-24-.jpg",
-      "quantity": 1,
-      "productId": 18,
-      "userId": null,
-      "id": 5
     }
   ]
 }
