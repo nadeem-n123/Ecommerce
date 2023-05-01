@@ -1,0 +1,71 @@
+.cart-detail{
+    margin: 0;
+    padding: 0;
+}
+.cart-detail h1{
+    color: lightgreen;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 15px;
+    padding-left: 20px;
+    background:linear-gradient(to right,rgba(199, 35, 35, 0.89),pink,black) ;
+    border-radius: 5px;
+    border: 2px solid lightgoldenrodyellow; 
+}
+.cart-detail h1 span{
+    padding-left: 58%;
+    background: -webkit-linear-gradient(purple,lightgreen,orange,red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cart-detail h1 span i{
+    padding: 3px;
+}
+@media only screen and (max-width: 1450px){
+    .cart-detail h1 span{
+        padding-left: 58%;
+        background: -webkit-linear-gradient(purple,lightgreen,orange,red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .cart-detail h1 span{
+        padding-left: 50%;
+        background: -webkit-linear-gradient(purple,lightgreen,orange,red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .cart-detail h1 span{
+        padding-left: 40%;
+        background: -webkit-linear-gradient(purple,lightgreen,orange,red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+}
+@media only screen and (max-width: 900px){
+    .cart-detail h1 span{
+        padding-left: 35%;
+        background: -webkit-linear-gradient(purple,lightgreen,orange,red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+}
+@media only screen and (max-width: 800px){
+    .cart-detail h1 span{
+        padding-left: 25%;
+        background: -webkit-linear-gradient(purple,lightgreen,orange,red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+}
+@media only screen and (max-width: 700px){
+    .cart-detail h1 span{
+        padding-left: 25%;
+        background: -webkit-linear-gradient(purple,lightgreen,orange,red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+}
