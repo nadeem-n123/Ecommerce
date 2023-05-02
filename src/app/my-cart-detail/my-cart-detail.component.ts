@@ -31,7 +31,9 @@ export class MyCartDetailComponent implements OnInit {
         this.myCartData = Objs;
         let sum = 0;
         Objs.forEach((item) => {
-          sum = sum + (+item.price);
+          if(item.quantity){
+          sum = sum + (+item.price*  +item.quantity);
+          }
         })
         console.log(sum);
         this.AmountSummary.price=sum;

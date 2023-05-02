@@ -1,0 +1,28 @@
+.checkout{
+    margin-top: 20px;
+    padding-left: 15px;
+    margin-bottom: 50px;
+}
+.checkout h1{
+    border-bottom: 2px solid blue;
+    font-weight: bold;
+    background: -webkit-linear-gradient(purple,red,#333,blue,orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.checkout h4{
+    color: blueviolet;
+    font-weight: bold;
+    text-align: center;
+}
+.f-btn{
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: darkred;
+    background:linear-gradient(to right,pink,orange,beige,navy);
+}
+.form-text{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}

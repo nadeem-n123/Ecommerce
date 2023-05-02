@@ -37,3 +37,14 @@ export interface Amountsummary{
     delivary: number,
     total: number
 }
+export interface order{
+    name: string,
+    email: string,
+    address: string,
+    contact: number,
+    zipcode: number,
+    state: string,
+    totalPrice: number | undefined,
+    userId: number,
+    id: number | undefined
+}

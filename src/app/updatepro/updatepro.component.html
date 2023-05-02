@@ -1,4 +1,4 @@
-<div class="add-pro">
+<div class="update-pro">
     <hr><h1 class="text-center" style="color: blueviolet; background-color: lightgray;">Update Seller Product's</h1><hr>
     <p class="message_p">{{updateProductmsg}}</p>
     <form [formGroup] = "updateProduct" (ngSubmit)="onUpdate(updateProduct.value)" class="common-form">
@@ -52,6 +52,6 @@
             </span>
         </span>
         <input class="form-input" type="text" placeholder="products image URL" formControlName="img">
-        <button class="form-input">Update</button>
+        <button class="form-input form-button">Update</button>
     </form>
 </div>

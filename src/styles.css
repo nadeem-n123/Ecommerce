@@ -13,15 +13,19 @@ body{
     height: 35px;
     padding-left: 10px;
     border: 1px solid blueviolet;
+    background-color: #f8f8f8;
     color: blueviolet;
     margin: 10px;
     text-align: center;
     font-weight: bold;
 }
 .form-button{
-    height: 35px;
-    border: 1px solid blueviolet;
+    background-color: navy;
+    border: 1px solid beige;
+    color: beige;
     cursor: pointer;
+    font-weight: bold;
+    height: 35px;
     margin: 10px;
 }
 .message_p{

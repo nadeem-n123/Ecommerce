@@ -1,0 +1,23 @@
+.my-order{
+    margin-bottom: 80px;
+}
+.my-order h1{
+    border-bottom: 2px solid rgb(238, 9, 9);
+    font-weight: bold;
+    background: -webkit-linear-gradient(violet,indigo,blue,green,yellow,orange,red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.my-order .heading{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background: -webkit-linear-gradient(red,orange,black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.my-order .row{
+    margin-top: 25px;
+}

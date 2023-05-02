@@ -10,6 +10,8 @@ import { SearchComponent } from './search/search.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { MyCartDetailComponent } from './my-cart-detail/my-cart-detail.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrderComponent } from './my-order/my-order.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -20,7 +22,9 @@ const routes: Routes = [
   {path:'search/:query', component:SearchComponent},
   {path:'product-detail/:productId', component:ProductDetailComponent},
   {path:'user-auth', component:UserAuthComponent},
-  {path:'my-cart', component:MyCartDetailComponent}
+  {path:'my-cart', component:MyCartDetailComponent},
+  {path:'checkout', component:CheckoutComponent},
+  {path:'my-order', component:MyOrderComponent}
 ];
 
 @NgModule({

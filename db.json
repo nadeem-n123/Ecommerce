@@ -44,7 +44,7 @@
     {
       "pname": "hp 1200",
       "price": "42,000",
-      "color": "black",
+      "color": "silver",
       "category": "Laptop",
       "pdesc": "Hp is the best laptop company in the market.",
       "img": "https://www.cnet.com/a/img/resize/01ebf2fb7a844ce940f0b1c3ddc148faddc4a6c1/hub/2022/04/27/b796792b-5b34-4405-83eb-efc66371ee06/samsung-galaxy-book-2-pro-360-01.jpg?auto=webp&fit=crop&height=900&width=1200",
@@ -62,7 +62,7 @@
     {
       "pname": "Gem neckless",
       "price": "1,80,000",
-      "color": "lightgold",
+      "color": "gold",
       "category": "jwellery",
       "pdesc": "Gem is the product of origional metal.",
       "img": "https://www.financialexpress.com/wp-content/uploads/2023/02/Gem-jewellery-industry-disappointed-with-Union-budget-for-2023-24-.jpg",
@@ -134,6 +134,30 @@
       "userId": 3,
       "productId": 16,
       "id": 4
+    },
+    {
+      "pname": "hp 1200",
+      "price": "42,000",
+      "color": "silver",
+      "category": "Laptop",
+      "pdesc": "Hp is the best laptop company in the market.",
+      "img": "https://www.cnet.com/a/img/resize/01ebf2fb7a844ce940f0b1c3ddc148faddc4a6c1/hub/2022/04/27/b796792b-5b34-4405-83eb-efc66371ee06/samsung-galaxy-book-2-pro-360-01.jpg?auto=webp&fit=crop&height=900&width=1200",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 16,
+      "id": 5
+    }
+  ],
+  "orders": [
+    {
+      "name": "nadeem",
+      "email": "nadeem@gmail.com",
+      "address": "ajhui hasanpur",
+      "contact": "7896585478",
+      "zipcode": "789654",
+      "state": "Uttar Pradesh",
+      "totalPrice": null,
+      "id": 1
     }
   ]
 }

@@ -1,0 +1,90 @@
+<div class="checkout">
+    <h1>Checkout</h1>
+    <div class="row">
+        <div class="col-sm-7">
+            <h4>Add Shipping Address</h4>
+            <form [formGroup]="orderAddress" (ngSubmit)="addShipping(orderAddress.value)" class="common-form mb-4">
+                <input class="form-input" type="text" placeholder="Name" formControlName="name" maxlength="20">
+                <span class="form-text text-danger px-2" *ngIf="submitted && orderAddress.controls.name.errors">
+                    <span *ngIf="submitted && orderAddress.controls.name.errors['required']">
+                        Username is required.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.name.errors['minlength']">
+                        Minimum length required atleast 5 character.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.name.errors['maxlength']">
+                        Maximum length is 20 character.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.name.errors['pattern']">
+                        ! Please enter a valid user name.
+                    </span>
+                </span>
+                <input class="form-input" type="text" placeholder="Email" formControlName="email">
+                <span class="form-text text-danger px-2" *ngIf="submitted && orderAddress.controls.email.errors">
+                    <span *ngIf="submitted && orderAddress.controls.email.errors['required']">
+                        email is required.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.email.errors['email']">
+                        Please enter valid email.
+                    </span>
+                </span>
+                <input class="form-input" type="text" placeholder="Address" formControlName="address">
+                <span class="form-text text-danger px-2" *ngIf="submitted && orderAddress.controls.address.errors">
+                    <span *ngIf="submitted && orderAddress.controls.address.errors['required']">
+                        Address is required.
+                    </span>
+                </span>
+                <input class="form-input" type="text" placeholder="Contact" formControlName="contact" maxlength="10">
+                <span class="form-text text-danger px-2" *ngIf="submitted && orderAddress.controls.contact.errors">
+                    <span *ngIf="submitted && orderAddress.controls.contact.errors['required']">
+                        contact is required.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.contact.errors['maxlength']">
+                        Maximum length required 10 character.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.contact.errors['pattern']">
+                        ! Please enter a valid contact number.
+                    </span>
+                </span>
+                <input class="form-input" type="text" placeholder="Zipcode" formControlName="zipcode" maxlength="6">
+                <span class="form-text text-danger px-2" *ngIf="submitted && orderAddress.controls.zipcode.errors">
+                    <span *ngIf="submitted && orderAddress.controls.zipcode.errors['required']">
+                        Zipcode is required.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.zipcode.errors['maxlength']">
+                        Maximum length required 6 character.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.zipcode.errors['pattern']">
+                        ! Please enter a valid zipCode.
+                    </span>
+                </span>
+                <input class="form-input" type="text" placeholder="State" formControlName="state" maxlength="20">
+                <span class="form-text text-danger px-2" *ngIf="submitted && orderAddress.controls.state.errors">
+                    <span *ngIf="submitted && orderAddress.controls.state.errors['required']">
+                        State is required.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.state.errors['maxlength']">
+                        Maximum length is 20 character.
+                    </span>
+                    <span *ngIf="submitted && orderAddress.controls.state.errors['pattern']">
+                        ! Please enter a valid state name.
+                    </span>
+                </span>
+                <button class="form-input f-btn">Order Now</button>
+            </form>
+        </div>
+        <div class="col-sm-5" style="margin-top: 140px;">
+            <h2 style="margin-bottom: 30px;">Total Amount : <b>{{totalPrice}}</b></h2><hr>
+            <h4>Payment Method :
+               <select>
+                <option selected>Select Pay Method</option>
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="Upi">Upi</option>
+                <option value="Paypal">Paypal</option>
+               </select>
+            </h4>
+            
+        </div>
+    </div>
+</div>

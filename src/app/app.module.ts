@@ -18,6 +18,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { FooterComponent } from './footer/footer.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { MyCartDetailComponent } from './my-cart-detail/my-cart-detail.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrderComponent } from './my-order/my-order.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { MyCartDetailComponent } from './my-cart-detail/my-cart-detail.component
     ProductDetailComponent,
     FooterComponent,
     UserAuthComponent,
-    MyCartDetailComponent
+    MyCartDetailComponent,
+    CheckoutComponent,
+    MyOrderComponent
   ],
   imports: [
     BrowserModule,
