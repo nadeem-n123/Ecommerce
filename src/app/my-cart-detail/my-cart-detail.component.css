@@ -1,16 +1,33 @@
 .cart-detail{
-    margin: 0;
-    padding: 0;
+    margin-bottom: 50px;
 }
 .cart-detail h1{
     color: lightgreen;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     margin-top: 15px;
-    padding-left: 20px;
+    padding-left: 5px;
     background:linear-gradient(to right,rgba(199, 35, 35, 0.89),pink,black) ;
     border-radius: 5px;
     border: 2px solid lightgoldenrodyellow; 
+}
+.cart-detail h4{
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 4px;
+    background:linear-gradient(to right,rgba(71, 155, 235, 0.89),rgb(230, 100, 241),#ddd) ;
+    border-radius: 5px;
+}
+.cart-detail h4 .amt-smry{
+    padding-left: 8%;
+    color: #000;
+}
+.cart-detail h4 .smry-dtl{
+   border-right: 5px solid lightgoldenrodyellow;
+   padding-right: 550px;
+   padding-top: 4px;
+   padding-bottom: 14px;
 }
 .cart-detail h1 span{
     padding-left: 58%;
@@ -20,6 +37,16 @@
 }
 .cart-detail h1 span i{
     padding: 3px;
+}
+.details .vd{
+    background-color: lightseagreen;
+    border: 1px solid lightseagreen;
+    border-radius: 8px;
+    color: beige;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
 }
 @media only screen and (max-width: 1450px){
     .cart-detail h1 span{
@@ -69,3 +96,40 @@
   -webkit-text-fill-color: transparent;
     }
 }
+.details ul{
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid lightgoldenrodyellow;
+    border-right: 5px solid lightgoldenrodyellow;
+    padding: 10px;
+}
+.summary .row ul{
+    font-size: 18px;
+    font-weight: bold;
+    list-style-type: none;
+    padding: 30px;
+    margin-top: 30px;
+    line-height: 35px;
+}
+.summary .row ul li{
+    background-color: #ddd;
+    border-radius: 5px;
+    padding-left: 20px;
+    border-bottom: 1px dotted gold;
+}
+.summary .row ul li .vd {
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 100px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-decoration: none;
+}
+

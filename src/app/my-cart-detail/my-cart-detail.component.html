@@ -1,3 +1,56 @@
 <div class="cart-detail">
-    <h1>My Cart Details <span><i class="fa fa-cc-visa"></i><i class="fa fa-paypal"></i><i class="fa fa-cc-mastercard"></i></span></h1>
+    <h1>My Cart Details <span><i class="fa fa-cc-visa"></i><i class="fa fa-paypal"></i><i
+                class="fa fa-cc-mastercard"></i></span></h1>
+    <h4><span class="smry-dtl">Summary Details</span><span class="amt-smry">Amount Summary</span></h4>
+    <div class="row">
+        <div class="col-sm-8 details">
+            <ul *ngFor="let data of myCartData">
+                <li>
+                    <img style="height: 70px; width: 100px;"
+                        src="{{data.img}}" />
+                </li>
+                <li>
+                    <span style="font-size: 20px; color: blueviolet;">{{data.pname}}</span>
+                </li>
+                <li>
+                    <span>Price : ${{data.price}}</span>
+                </li>
+                <li>
+                    <span>Quantity : {{data.quantity}}</span>
+                </li>
+                <li>
+                    <a class="vd">Remove To Cart</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-4 summary">
+            <div class="row">
+                <ul>
+                    <li>
+                        Total Cart : <span style="padding-left: 170px;">2</span>
+                    </li>
+                    <li>
+                        Included Tax : <span style="padding-left: 130px;">{{AmountSummary.tax}}</span>
+                    </li>
+                    <li>
+                        Total Amount : <span style="padding-left: 125px;">{{AmountSummary.price}}</span>
+                    </li>
+                    <li>
+                        Shipping Charge : <span style="padding-left: 110px;">{{AmountSummary.delivary}}</span>
+                    </li>
+                    <li>
+                        Discount : <span style="padding-left: 165px;">{{AmountSummary.discount}}</span>
+                    </li>
+                    <hr>
+                    <li>
+                        Payable Amount : <span style="padding-left: 100px;">{{AmountSummary.total}}</span>
+                    </li>
+                    <hr>
+                    <li>
+                        <a routerLink="/" class="vd">Pay : {{AmountSummary.total}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

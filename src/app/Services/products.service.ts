@@ -88,4 +88,10 @@ export class ProductsService {
       }
     })
   }
+
+  myAddedCart(){
+    let userStore = localStorage.getItem('user');
+    let userData = userStore && JSON.parse(userStore);
+    return this.http.get<cart[]>('http://localhost:3000/cart?userId='+userData.id);
+  }
 }
