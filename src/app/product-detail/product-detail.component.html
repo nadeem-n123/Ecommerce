@@ -14,7 +14,7 @@
         <h6><b>Category :</b> {{productDetail.category}}</h6>
         <h6><b>Description :</b> {{productDetail.pdesc}}</h6>
         <div class="product-footer mt-4">
-            <a class="ac">Buy Now</a>
+            <a class="ac" routerLink="/my-cart">Buy Now</a>
 			<a *ngIf="!removeCart" class="vd" (click)="Addtocart()">Add To Cart</a>
 			<a *ngIf="removeCart" class="vd" (click)="removecart(productDetail.id)">Remove Cart</a>
             <div class="quantity-group mt-2">

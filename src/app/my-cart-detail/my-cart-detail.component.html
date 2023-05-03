@@ -19,9 +19,12 @@
                     <span>Quantity : {{data.quantity}}</span>
                 </li>
                 <li>
-                    <a class="vd">Remove To Cart</a>
+                    <a class="vd" (click)="removeCartData(data.id)">Remove To Cart</a>
                 </li>
             </ul>
+            <div class="error">
+                <h2>{{Error}}<br>{{Error1}}</h2>
+            </div>
         </div>
         <div class="col-sm-4 summary">
             <div class="row">
@@ -47,7 +50,7 @@
                     </li>
                     <hr>
                     <li>
-                        <a routerLink="/checkout" class="vd">Checkout</a>
+                        <a (click)="goToCheckout()" class="vd">Checkout</a>
                     </li>
                 </ul>
             </div>

@@ -3,7 +3,7 @@
 }
 .cart-detail h1{
     color: lightgreen;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     margin-top: 15px;
     padding-left: 5px;
@@ -27,7 +27,7 @@
    border-right: 5px solid lightgoldenrodyellow;
    padding-right: 550px;
    padding-top: 4px;
-   padding-bottom: 14px;
+   padding-bottom: 13px;
 }
 .cart-detail h1 span{
     padding-left: 58%;
@@ -47,6 +47,10 @@
     font-weight: bold;
     padding: 10px;
     text-decoration: none;
+}
+.details .vd:hover{
+    background-color: darkred;
+    border: 1px solid darkred;
 }
 @media only screen and (max-width: 1450px){
     .cart-detail h1 span{
@@ -131,5 +135,32 @@
     padding-top: 6px;
     padding-bottom: 6px;
     text-decoration: none;
+}
+.summary .row ul li .vd:hover{
+    background-color: darkgreen;
+}
+.error h2 {
+    margin-top: 120px;
+    font-size: 4em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    animation: animate 
+        2s linear infinite;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        color: yellow;
+    }
+
+    50% {
+        opacity: 0.7;
+        color: red
+    }
+
+    100% {
+        opacity: 0;
+        color: black;
+    }
 }
 
