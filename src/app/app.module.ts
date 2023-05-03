@@ -20,6 +20,7 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
 import { MyCartDetailComponent } from './my-cart-detail/my-cart-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrderComponent } from './my-order/my-order.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MyOrderComponent } from './my-order/my-order.component';
     UserAuthComponent,
     MyCartDetailComponent,
     CheckoutComponent,
-    MyOrderComponent
+    MyOrderComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

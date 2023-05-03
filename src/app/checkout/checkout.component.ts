@@ -36,6 +36,7 @@ export class CheckoutComponent implements OnInit{
   getCurrentCart() {
     this.api.myAddedCart().subscribe((Objs) => {
         let sum = 0;
+        this.cartData = Objs;
         Objs.forEach((item) => {
           if(item.quantity){
           sum = sum + (+item.price*  +item.quantity);
@@ -43,9 +44,8 @@ export class CheckoutComponent implements OnInit{
         })
         this.totalPrice = sum+(sum/18)+50-(sum/20);
       })
-      }
+  }
   
-
   addShipping(data: any){
     this.submitted = true;
 
