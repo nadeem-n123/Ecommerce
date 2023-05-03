@@ -158,6 +158,28 @@
       "state": "Uttar Pradesh",
       "totalPrice": null,
       "id": 1
+    },
+    {
+      "name": "wakeel",
+      "email": "wk@gmail.com",
+      "address": "Haidergarh",
+      "contact": "9865458789",
+      "zipcode": "896323",
+      "state": "Up",
+      "totalPrice": null,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "sakeel",
+      "email": "sk@gmail.com",
+      "address": "khairabaad",
+      "contact": "9756321452",
+      "zipcode": "630220",
+      "state": "Up",
+      "totalPrice": null,
+      "userId": 2,
+      "id": 3
     }
   ]
 }

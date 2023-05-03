@@ -29,6 +29,7 @@ export class CheckoutComponent implements OnInit{
     private api:ProductsService,
     private _router:Router
   ){}
+  
   ngOnInit(): void {
     this.getCurrentCart();
   }
@@ -57,7 +58,16 @@ export class CheckoutComponent implements OnInit{
       let orderData: order = {
         ...data,
         totalPrice:this.totalPrice,
+        userId,
+        id: undefined
       }
+
+      // this code is used to remove the cart
+      this.cartData?.forEach((item:cart)=>{
+        this.api.deleteCartItem(item.id)
+      })
+
+      // This code is run for add the shipping address
       this.api.addOrdersDetail(orderData).subscribe((Objs)=>{
         if(Objs){
           this.submitted = false;
