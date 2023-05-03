@@ -62,14 +62,12 @@ export class CheckoutComponent implements OnInit{
         userId,
         id: undefined
       }
-
       // this code is used to remove the cart
       this.cartData?.forEach((item)=>{
          setTimeout(()=>{
           this.api.deleteCartItem(item.id);
          },600)
       })
-
       // This code is run for add the shipping address
       this.api.addOrdersDetail(orderData).subscribe((Objs)=>{
         if(Objs){

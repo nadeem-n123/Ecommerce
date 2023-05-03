@@ -1,6 +1,6 @@
 <nav class="nav">
     <h1><a routerLink=""><img style="width: 250px;" src="/assets/e-com.png" alt=""></a></h1>
-    <div *ngIf="menuType==='default'" class="nav-search">
+    <div *ngIf="menuType!=='seller'" class="nav-search">
         <input type="text"
         #searchInput 
         (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search for products" />
