@@ -76,6 +76,15 @@
       "pdesc": "compfy casual is the best company into the market of shoes.",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSrLgL7P5Os6dYytdiR4pN1W85ZLI4wxzmJdRaiH04xSEFkK9Vi5To1Izh5SIrKZtNCLE&usqp=CAU",
       "id": 19
+    },
+    {
+      "pname": "TomatoGinger",
+      "price": "110",
+      "color": "red",
+      "category": "vegetables",
+      "pdesc": "Is used to cooking the food.",
+      "img": "https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcR61F36y-FxJ1SuhuKrBUmJeQtWyklBOtf_QcqLNnziuboOyVCBPXjSiJsNqIQ_AIvd",
+      "id": 20
     }
   ],
   "users": [
@@ -90,96 +99,7 @@
       "email": "alex1@user.com",
       "password": "alex005",
       "id": 2
-    },
-    {
-      "name": "MusheerAbbas",
-      "email": "musheer1@user.com",
-      "password": "musheer0",
-      "id": 3
     }
   ],
-  "cart": [
-    {
-      "pname": "Neckless",
-      "price": "1,50,000",
-      "color": "gold",
-      "category": "jwellery",
-      "pdesc": "gold is the best metal related to others metal.",
-      "img": "https://www.krishnajewellers.com/blog/wp-content/uploads/2021/12/Buy-Gold-Choker-Designs.jpg",
-      "quantity": 1,
-      "userId": 2,
-      "productId": 17,
-      "id": 2
-    },
-    {
-      "pname": "Compfy casual",
-      "price": "1500",
-      "color": "brown",
-      "category": "shoes",
-      "pdesc": "compfy casual is the best company into the market of shoes.",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSrLgL7P5Os6dYytdiR4pN1W85ZLI4wxzmJdRaiH04xSEFkK9Vi5To1Izh5SIrKZtNCLE&usqp=CAU",
-      "quantity": 1,
-      "userId": 2,
-      "productId": 19,
-      "id": 3
-    },
-    {
-      "pname": "hp 1200",
-      "price": "42,000",
-      "color": "black",
-      "category": "Laptop",
-      "pdesc": "Hp is the best laptop company in the market.",
-      "img": "https://www.cnet.com/a/img/resize/01ebf2fb7a844ce940f0b1c3ddc148faddc4a6c1/hub/2022/04/27/b796792b-5b34-4405-83eb-efc66371ee06/samsung-galaxy-book-2-pro-360-01.jpg?auto=webp&fit=crop&height=900&width=1200",
-      "quantity": 1,
-      "userId": 3,
-      "productId": 16,
-      "id": 4
-    },
-    {
-      "pname": "hp 1200",
-      "price": "42,000",
-      "color": "silver",
-      "category": "Laptop",
-      "pdesc": "Hp is the best laptop company in the market.",
-      "img": "https://www.cnet.com/a/img/resize/01ebf2fb7a844ce940f0b1c3ddc148faddc4a6c1/hub/2022/04/27/b796792b-5b34-4405-83eb-efc66371ee06/samsung-galaxy-book-2-pro-360-01.jpg?auto=webp&fit=crop&height=900&width=1200",
-      "quantity": 1,
-      "userId": 1,
-      "productId": 16,
-      "id": 5
-    }
-  ],
-  "orders": [
-    {
-      "name": "nadeem",
-      "email": "nadeem@gmail.com",
-      "address": "ajhui hasanpur",
-      "contact": "7896585478",
-      "zipcode": "789654",
-      "state": "Uttar Pradesh",
-      "totalPrice": null,
-      "id": 1
-    },
-    {
-      "name": "wakeel",
-      "email": "wk@gmail.com",
-      "address": "Haidergarh",
-      "contact": "9865458789",
-      "zipcode": "896323",
-      "state": "Up",
-      "totalPrice": null,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "name": "sakeel",
-      "email": "sk@gmail.com",
-      "address": "khairabaad",
-      "contact": "9756321452",
-      "zipcode": "630220",
-      "state": "Up",
-      "totalPrice": null,
-      "userId": 2,
-      "id": 3
-    }
-  ]
+  "cart": []
 }

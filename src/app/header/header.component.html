@@ -29,6 +29,7 @@
         <!-- This header part is showing after user login -->
         <ul *ngSwitchCase="'user'">
             <li><a routerLink="">Home</a></li>
+            <li><a routerLink="my-order">My order's</a></li>
             <li><a routerLink="my-cart"><i class="fa fa-cart-plus"></i> Cart({{ cartCount }})</a></li>
             <li><a class="px-1" style="color: darkcyan; border: 2px solid darkcyan;" type="button" (click)="Userlogout()"><i class="fa fa-sign-out"></i> Logout</a></li>
             <li><a class="px-1 py-2" style="color: darkred; border: 2px solid darkred;"><i class="fa fa-user"></i> {{userName}}</a></li>

@@ -106,10 +106,14 @@ export class ProductsService {
   }
 
   deleteCartItem(cartId:number | undefined){
-    return this.http.delete('http://localhost:3000/cart'+cartId,{observe:'response'}).subscribe((res)=>{
+    return this.http.delete('http://localhost:3000/cart/'+cartId,{observe:'response'}).subscribe((res)=>{
     if(res){
       this.incCartCount.emit([]);
     }
     })
   } 
+
+  cancelOrder(orderId:number){
+    return this.http.delete('http://localhost:3000/orders/'+orderId);
+  }
 }

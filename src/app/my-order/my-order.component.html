@@ -19,7 +19,7 @@
     </div>
     <div class="row" *ngFor="let data of orderListData">
         <div class="col-sm-2">
-            <img style="height: 100px; width:150px;" src="">
+            <img style="height: 100px; width:150px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSrLgL7P5Os6dYytdiR4pN1W85ZLI4wxzmJdRaiH04xSEFkK9Vi5To1Izh5SIrKZtNCLE&usqp=CAU">
         </div>
         <div class="col-sm-2">
             <span style="line-height: 80px; padding-left: 20px;">{{data.id}}</span>
@@ -31,7 +31,7 @@
             <span style="line-height: 80px; padding-left: 20px;">Pending</span>
         </div>
         <div class="col-sm-2">
-            <span><button class="form-button mt-4">Cancel Order</button></span>
+            <span><button class="form-button mt-4" (click)="cancelOrder(data.id)">Cancel Order</button></span>
         </div>
     </div>
 </div>

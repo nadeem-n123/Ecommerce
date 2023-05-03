@@ -10,6 +10,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.suc-msg{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
 .checkout h4{
     color: blueviolet;
     font-weight: bold;

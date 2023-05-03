@@ -24,6 +24,7 @@ export class CheckoutComponent implements OnInit{
   totalPrice: undefined | number;
   cartData:cart[] | undefined;
   submitted:boolean = false;
+  ordermsg:string | undefined;
 
   constructor(
     private api:ProductsService,
@@ -63,8 +64,10 @@ export class CheckoutComponent implements OnInit{
       }
 
       // this code is used to remove the cart
-      this.cartData?.forEach((item:cart)=>{
-        this.api.deleteCartItem(item.id)
+      this.cartData?.forEach((item)=>{
+         setTimeout(()=>{
+          this.api.deleteCartItem(item.id);
+         },600)
       })
 
       // This code is run for add the shipping address
@@ -72,7 +75,11 @@ export class CheckoutComponent implements OnInit{
         if(Objs){
           this.submitted = false;
           this.orderAddress.reset();
-          this._router.navigate(['/my-order']);
+          this.ordermsg = 'Order has been placed successfully.'
+          setTimeout(()=>{
+            this._router.navigate(['/my-order']);
+            this.ordermsg = undefined;
+          },4000)
         }
       })
     }
