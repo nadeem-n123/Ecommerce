@@ -32,10 +32,12 @@ export class ProductsService {
     return this.http.put<product>(this.url+'/'+id,data);
   }
 
+  // this function is used inside the home page for get popular product.
   popularProducts(){
     return this.http.get<product[]>('http://localhost:3000/products?_limit=5');
   }
 
+  // this function is used inside the home page for get trendy product.
   trendyProducts(){
     return this.http.get<product[]>('http://localhost:3000/products?_limit=8');
   }
@@ -45,7 +47,7 @@ export class ProductsService {
     return this.http.get<product[]>(`http://localhost:3000/products?q=${querry}`);
   }
 
-  // Api for Add to cart Data
+  // Api for Add to cart Data used into the product-detail page.
   localAddToCart(data : product){
     let cartData = [];
     let localCartexit = localStorage.getItem('localCartexit');
@@ -60,7 +62,7 @@ export class ProductsService {
     this.incCartCount.emit(cartData);
   }
 
-  // Api for Remove Cart Data
+  // Api for Remove Cart Data used in the product-detail page.
   localRemoveToCart(productId:number){
     let cartData = localStorage.getItem('localCartexit');
     if(cartData){
@@ -80,6 +82,7 @@ export class ProductsService {
     return this.http.delete(`http://localhost:3000/cart/`+cartId);
   }
 
+  // this function is used into the product-detail page after user login api.
   getCartList(userId:number){
     return this.http.get<product[]>(`http://localhost:3000/cart?userId=`+userId,{observe : 'response'})
     .subscribe((Objs:any)=>{
@@ -113,6 +116,7 @@ export class ProductsService {
     })
   } 
 
+  // this function is used into the my-order component to cancel the order .
   cancelOrder(orderId:number){
     return this.http.delete('http://localhost:3000/orders/'+orderId);
   }

@@ -26,9 +26,9 @@ export class MyOrderComponent implements OnInit{
     })
   }
 
-  cancelOrder(orderId:number|undefined){
-    orderId && this.api.cancelOrder(orderId).subscribe((res)=>{
-      this.getmyOrderList();
-    })
-  }
+  // cancelOrder(orderId:number|undefined){
+  //   orderId && this.api.cancelOrder(orderId).subscribe((res)=>{
+  //     this.getmyOrderList();
+  //   })
+  // }
 }
