@@ -21,6 +21,8 @@ import { MyCartDetailComponent } from './my-cart-detail/my-cart-detail.component
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrderComponent } from './my-order/my-order.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MyCartDetailComponent,
     CheckoutComponent,
     MyOrderComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AboutUsComponent,
+    TermsConditionsComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ export class UserService {
     private _router:Router
     ) { }
 
+  // this function is called into the user-auth-page.
   userSignUp(user:Signup){
     this.http.post(`${this.url}`,user,{observe:'response'})
     .subscribe((res:any)=>{
@@ -28,12 +29,14 @@ export class UserService {
     })
   }
 
+  // this function is used in the user-auth-page.
   reloaduser(){
     if(localStorage.getItem('user')){
       this._router.navigate(['/'])
     }
   }
 
+  // this function is used user-auth-page for login the user. 
   userLogin(data:login){
     this.http.get<Signup[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,{observe : 'response'})
     .subscribe((res)=>{

@@ -12,6 +12,9 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
 import { MyCartDetailComponent } from './my-cart-detail/my-cart-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrderComponent } from './my-order/my-order.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -24,7 +27,10 @@ const routes: Routes = [
   {path:'user-auth', component:UserAuthComponent},
   {path:'my-cart', component:MyCartDetailComponent},
   {path:'checkout', component:CheckoutComponent},
-  {path:'my-order', component:MyOrderComponent}
+  {path:'my-order', component:MyOrderComponent},
+  {path:'aboutus',component:AboutUsComponent},
+  {path:'termsconditions',component:TermsConditionsComponent},
+  {path:'contactus',component:ContactUsComponent}
 ];
 
 @NgModule({

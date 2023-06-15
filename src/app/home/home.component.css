@@ -13,7 +13,9 @@
     cursor: pointer;
     color: blueviolet;
     border: 1px solid blueviolet;
-    padding: 5px;
+    padding: 7px;
+    padding-left: 92px;
+    padding-right: 84px;
 }
 .product-footer a:hover {
     background-color: blueviolet;

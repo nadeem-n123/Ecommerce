@@ -1,0 +1,21 @@
+.container{
+    margin-top: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: indigo;
+}
+.col-md-6{
+    padding: 30px;
+}
+input{
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 10px;
+}
+button{
+    border-radius: 7px;
+    padding-right: 85px;
+    padding-left: 85px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
