@@ -14,8 +14,11 @@ input{
 }
 button{
     border-radius: 7px;
-    padding-right: 85px;
-    padding-left: 85px;
+    padding-right: 80px;
+    padding-left: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
