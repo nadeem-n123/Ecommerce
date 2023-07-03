@@ -1,35 +1,96 @@
 <h1 style="text-align: center; font-weight: bold;">Contact Us</h1>
-<div class="container">
-    <div class="row mt-3 mx-4">
-        <div class="col-md-6">
-            <input type="text" placeholder="first name">
-        </div>
-        <div class="col-md-6">
-            <input type="text" placeholder="last name">
-        </div>
-    </div>
-    <div class="row mt-3 mx-4">
-        <div class="col-md-6">
-            <input type="text" placeholder="email">
-        </div>
-        <div class="col-md-6">
-            <input type="text" placeholder="address">
-        </div>
-    </div>
-    <div class="row mt-3 mx-4">
-        <div class="col-md-6">
-            <input type="text" placeholder="state">
-        </div>
-        <div class="col-md-6">
-            <input type="text" placeholder="phone">
-        </div>
-    </div>
-    <div class="row mt-2 mx-4">
-        <div class="col-md-6">
-            <button class="btn btn-success">Submit</button>
-        </div>
-        <div class="col-md-6">
-           <button class="btn btn-primary">Reset</button>
-        </div>
+<div class="col-md-10 container-box">
+    <div class="container">
+        <form [formGroup]="contactUs" (ngSubmit)="onSubmit(contactUs.value)">
+            <div class="row mx-4">
+                <div class="col-md-6">
+                    <input type="text" placeholder="first name" formControlName="fname" maxlength="15"><br>
+                    <span class="form-text text-danger px-1" *ngIf="submitted && contactUs.controls.fname.errors">
+                        <span *ngIf="submitted && contactUs.controls.fname.errors['required']">
+                            First name is required.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.fname.errors['minlength']">
+                            First name atleast 3 character.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.fname.errors['maxlength']">
+                            Maximum length allowed only 15 character.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.fname.errors['pattern']">
+                            Please ! enter a valid name.
+                        </span>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="last name" formControlName="lname" maxlength="15"><br>
+                    <span class="form-text text-danger px-1" *ngIf="submitted && contactUs.controls.lname.errors">
+                        <span *ngIf="submitted && contactUs.controls.lname.errors['required']">
+                            Last name is required.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.lname.errors['minlength']">
+                            Last name atleast 3 character.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.lname.errors['maxlength']">
+                            Maximum length allowed only 15 character's.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.lname.errors['pattern']">
+                            Please ! enter a valid name.
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="row mt-3 mx-4">
+                <div class="col-md-6">
+                    <input type="text" placeholder="email" formControlName="email"><br>
+                    <span class="form-text text-danger" *ngIf="submitted && contactUs.controls.email.errors">
+                        <span *ngIf="submitted && contactUs.controls.email.errors['required']">
+                            Email is Required.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.email.errors['email']">
+                            Please ! enter a valid email.
+                        </span>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="address" formControlName="addr"><br>
+                    <span class="form-text text-danger" *ngIf="submitted && contactUs.controls.addr.errors">
+                        <span *ngIf="submitted && contactUs.controls.addr.errors['required']">
+                            Address is required.
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="row mt-3 mx-4">
+                <div class="col-md-6">
+                    <input type="text" placeholder="state" formControlName="state"><br>
+                    <span class="form-text text-danger" *ngIf="submitted && contactUs.controls.state.errors">
+                        <span *ngIf="submitted && contactUs.controls.state.errors['required']">
+                            State is required.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.state.errors['pattern']">
+                            Please ! enter a valid State.
+                        </span>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="phone" formControlName="phone"><br>
+                    <span class="form-text text-danger" *ngIf="submitted && contactUs.controls.phone.errors">
+                        <span *ngIf="submitted && contactUs.controls.phone.errors['required']">
+                            Phone is required.
+                        </span>
+                        <span *ngIf="submitted && contactUs.controls.phone.errors['pattern']">
+                            Please ! enter a valid phone number.
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="row mt-2 mx-4">
+                <div class="col-md-6">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-primary">Reset</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>

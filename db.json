@@ -16,10 +16,10 @@
   "products": [
     {
       "pname": "Levis jeans",
-      "price": "1600",
+      "price": "1100",
       "color": "darkblue",
       "category": "paints",
-      "pdesc": "means used this.",
+      "pdesc": "mens used this.",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccmfLvVgMPVvmO77FZhArLoQwx72zolFjHQ&usqp=CAU",
       "id": 13
     },
